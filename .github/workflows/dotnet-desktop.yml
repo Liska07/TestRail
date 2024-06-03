@@ -1,5 +1,5 @@
 name: TestRail
-run-name: Run ${{github.event.inputs.test_category}} tests
+run-name: Run ${{github.event.inputs.test_category || 'All'}} tests
 
 on:
   workflow_dispatch:
@@ -10,7 +10,7 @@ on:
        options:
        - All
   schedule:
-    - cron: '05 13 * * *'
+    - cron: '55 13 * * *'
 
 jobs:
 
@@ -41,7 +41,7 @@ jobs:
           
     # Execute all unit tests in the solution
     - name: Execute All tests
-      if: github.event.inputs.test_category == 'All'
+      if: ${{ github.event.inputs.test_category == 'All' || github.event_name == 'schedule' }}
       run: dotnet test
 
     - name: Load test report history
