@@ -9,6 +9,7 @@ on:
        type: choice
        options:
        - All
+       - Smoke
   schedule:
     - cron: '55 13 * * *'
 
@@ -43,6 +44,11 @@ jobs:
     - name: Execute All tests
       if: ${{ github.event.inputs.test_category == 'All' || github.event_name == 'schedule' }}
       run: dotnet test
+
+      # Execute smoke tests
+    - name: Execute Smoke Tests
+      if: github.event.inputs.test_category == 'Smoke'
+      run: dotnet test --filter Category=SmokeTests
 
     - name: Load test report history
       uses: actions/checkout@v3

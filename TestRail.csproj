@@ -41,7 +41,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\ProjectPages\" />
     <Folder Include="Steps\API\" />
     <Folder Include="Tests\API\" />
   </ItemGroup>

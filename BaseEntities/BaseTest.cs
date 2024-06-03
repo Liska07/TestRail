@@ -5,7 +5,7 @@ using NLog;
 using OpenQA.Selenium;
 using TestRail.Core;
 using TestRail.Pages;
-//using TestRail.Pages.ProjectPages;
+using TestRail.Pages.ProjectPages;
 using TestRail.Steps.UI;
 
 namespace TestRail.BaseEntities
@@ -15,12 +15,18 @@ namespace TestRail.BaseEntities
     [FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
     [AllureNUnit]
     [AllureOwner("EAntonova")]
+    [AllureEpic("TestRail")]
     public class BaseTest
     {
         protected IWebDriver driver;
         protected UserStep userStep;
-        //protected ProjectStep projectStep;
-        //protected NavigationStep navigationStep;
+        protected ProjectStep projectStep;
+        protected NavigationStep navigationStep;
+        protected LoginPage loginPage;
+        protected DashboardPage dashboardPage;
+        protected AddProjectPage addProjectPage;
+        protected ProjectListPage projectListPage;
+        protected ConfirmationPage confirmationPage;
         protected readonly Logger logger = LogManager.GetCurrentClassLogger();
 
         [OneTimeSetUp]
@@ -37,8 +43,13 @@ namespace TestRail.BaseEntities
             driver = new Browser().Driver;
             new LoginPage(driver, true);
             userStep = new UserStep(driver);
-            //projectStep = new ProjectStep(driver);
-            //navigationStep = new NavigationStep(driver);
+            projectStep = new ProjectStep(driver);
+            navigationStep = new NavigationStep(driver);
+            loginPage = new LoginPage(driver);
+            dashboardPage = new DashboardPage(driver);
+            addProjectPage = new AddProjectPage(driver);
+            projectListPage = new ProjectListPage(driver);
+            confirmationPage = new ConfirmationPage(driver);
         }
 
         [TearDown]
@@ -69,6 +80,11 @@ namespace TestRail.BaseEntities
             Screenshot screenshot = takesscreenshot.GetScreenshot();
             byte[] screenshotByte = screenshot.AsByteArray;
             AllureApi.AddAttachment(name, "image/png", screenshotByte);
+        }
+
+        protected string CreateProjectName()
+        {
+            return "EAntonova_UI " + Guid.NewGuid();
         }
     }
 }

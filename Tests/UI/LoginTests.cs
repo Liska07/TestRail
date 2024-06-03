@@ -1,19 +1,16 @@
 ﻿using Allure.Net.Commons;
 using Allure.NUnit.Attributes;
 using TestRail.BaseEntities;
-using TestRail.Pages;
 using TestRail.Utils;
-using TestRail.Steps.UI;
 
 namespace TestRail.Tests.UI
 {
-    [Category("TestRail")]
-    [AllureEpic("TestRail")]
     [AllureFeature("Basic Functionality")]
     [AllureStory("Login")]
     public class LoginTests : BaseTest
     {
         [Test]
+        [Category("SmokeTests")]
         [AllureDescription("Check login with the correct username and password")]
         [AllureSeverity(SeverityLevel.blocker)]
         public void PositiveLogin()
@@ -29,15 +26,12 @@ namespace TestRail.Tests.UI
             string expectedUserNameErrorText = "Email/Login is required.";
             string expectedPasswordErrorText = "Password is required.";
 
-            LoginPage loginPage = userStep.UnsuccessfulLogin();
-
-            string actualUserNameErrorText = loginPage.GetUserNameErrorMessageText();
-            string actualPasswordErrorText = loginPage.GetPasswordErrorMessageText();
+            userStep.UnsuccessfulLogin();
 
             Assert.Multiple(() =>
             {
-                Assert.That(actualUserNameErrorText, Is.EqualTo(expectedUserNameErrorText));
-                Assert.That(actualPasswordErrorText, Is.EqualTo(expectedPasswordErrorText));
+                Assert.That(loginPage.GetUserNameErrorMessageText(), Is.EqualTo(expectedUserNameErrorText));
+                Assert.That(loginPage.GetPasswordErrorMessageText(), Is.EqualTo(expectedPasswordErrorText));
             });
         }
 
@@ -50,14 +44,13 @@ namespace TestRail.Tests.UI
             string password = "1234";
             string expectedPasswordErrorText = "Password is too short (5 characters required).";
 
-            LoginPage loginPage = userStep.UnsuccessfulLogin(userName, password);
+            userStep.UnsuccessfulLogin(userName, password);
 
-            string actualPasswordErrorText = loginPage.GetPasswordErrorMessageText();
-
-            Assert.That(actualPasswordErrorText, Is.EqualTo(expectedPasswordErrorText));
+            Assert.That(loginPage.GetPasswordErrorMessageText(), Is.EqualTo(expectedPasswordErrorText));
         }
 
         [Test]
+        [Category("SmokeTests")]
         [AllureDescription("Check the error messages if username or password are incorrect")]
         [AllureSeverity(SeverityLevel.critical)]
         [TestCaseSource(nameof(TestCases))]
@@ -66,15 +59,12 @@ namespace TestRail.Tests.UI
             string expectedTopErrorText = "Sorry, there was a problem.";
             string expectedLoginErrorText = "Email/Login or Password is incorrect. Please try again.";
 
-            LoginPage loginPage = userStep.UnsuccessfulLogin(userName, password);
-
-            string actualTopErrorText = loginPage.GetTopErrorMessageText();
-            string actualLoginErrorText = loginPage.GetLoginErrorMessageText();
+            userStep.UnsuccessfulLogin(userName, password);
 
             Assert.Multiple(() =>
             {
-                Assert.That(actualTopErrorText, Is.EqualTo(expectedTopErrorText));
-                Assert.That(actualLoginErrorText, Is.EqualTo(expectedLoginErrorText));
+                Assert.That(loginPage.GetTopErrorMessageText(), Is.EqualTo(expectedTopErrorText));
+                Assert.That(loginPage.GetLoginErrorMessageText(), Is.EqualTo(expectedLoginErrorText));
             });
         }
 
@@ -95,15 +85,12 @@ namespace TestRail.Tests.UI
             string expectedUserNameErrorText = "Email/Login is required.";
             string expectedPasswordErrorText = "Password is too short (5 characters required).";
 
-            LoginPage loginPage = userStep.UnsuccessfulLogin(password: password);
-
-            string actualUserNameErrorText = loginPage.GetUserNameErrorMessageText();
-            string actualPasswordErrorText = loginPage.GetPasswordErrorMessageText();
+            userStep.UnsuccessfulLogin(password: password);
 
             Assert.Multiple(() =>
             {
-                Assert.That(actualUserNameErrorText, Is.EqualTo(expectedUserNameErrorText));
-                Assert.That(actualPasswordErrorText, Is.EqualTo(expectedPasswordErrorText));
+                Assert.That(loginPage.GetUserNameErrorMessageText(), Is.EqualTo(expectedUserNameErrorText));
+                Assert.That(loginPage.GetPasswordErrorMessageText(), Is.EqualTo(expectedPasswordErrorText));
             });
         }
     }

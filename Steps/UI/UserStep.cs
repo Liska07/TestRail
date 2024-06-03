@@ -17,7 +17,7 @@ namespace TestRail.Steps.UI
         {
             Login(EnvironmentHelper.GetEnvironmentVariableOrThrow("TESTRAIL_USERNAME"),
                 EnvironmentHelper.GetEnvironmentVariableOrThrow("TESTRAIL_PASSWORD"));
-            logger.Info("Login successful");
+            logger.Info("Successful login");
             return dashboardPage;
         }
 
