@@ -32,6 +32,11 @@ jobs:
       with:
         dotnet-version: 8.0.x
 
+    - name: Set up environment variables
+      run: |
+        echo "TESTRAIL_USERNAME=${{secrets.TESTRAIL_USERNAME}}" >> $GITHUB_ENV
+        echo "TESTRAIL_PASSWORD=${{secrets.TESTRAIL_PASSWORD}}" >> $GITHUB_ENV
+          
     # Execute all unit tests in the solution
     - name: Execute All tests
       if: github.event.inputs.test_category == 'All'
