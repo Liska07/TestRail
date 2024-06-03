@@ -9,6 +9,8 @@ on:
        type: choice
        options:
        - All
+  schedule:
+    - cron: '05 13 * * *'
 
 jobs:
 
