@@ -10,6 +10,9 @@ on:
        options:
        - All
        - Smoke
+       - Login
+       - Project
+ 
   schedule:
     - cron: '55 13 * * *'
 
@@ -40,15 +43,25 @@ jobs:
         echo "TESTRAIL_USERNAME=${{secrets.TESTRAIL_USERNAME}}" >> $GITHUB_ENV
         echo "TESTRAIL_PASSWORD=${{secrets.TESTRAIL_PASSWORD}}" >> $GITHUB_ENV
           
-    # Execute all unit tests in the solution
+    # Execute all tests in the solution
     - name: Execute All tests
       if: ${{ github.event.inputs.test_category == 'All' || github.event_name == 'schedule' }}
       run: dotnet test
 
-      # Execute smoke tests
+    # Execute smoke tests
     - name: Execute Smoke Tests
       if: github.event.inputs.test_category == 'Smoke'
       run: dotnet test --filter Category=SmokeTests
+
+      # Execute login tests
+    - name: Execute Smoke Tests
+      if: github.event.inputs.test_category == 'Login'
+      run: dotnet test --filter Category=LoginTests
+
+      # Execute project tests
+    - name: Execute Smoke Tests
+      if: github.event.inputs.test_category == 'Project'
+      run: dotnet test --filter Category=ProjectTests
 
     - name: Load test report history
       uses: actions/checkout@v3
