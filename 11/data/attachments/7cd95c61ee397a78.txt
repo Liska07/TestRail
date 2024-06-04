@@ -1,0 +1,2 @@
+2024/06/04 18:46:32.888|INFO|Successful login     
+2024/06/04 18:46:33.648|INFO|Added EAntonova_UI 1a872d1f-a7e2-44f7-a090-8296c920c164 project     

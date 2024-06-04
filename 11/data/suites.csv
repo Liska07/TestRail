@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Jun 04 18:46:25 GMT 2024","Tue Jun 04 18:46:37 GMT 2024","11789","","","","ProjectTests","DeleteAddedProject","DeleteAddedProject","Verifying an added project has been deleted"
+"passed","Tue Jun 04 18:46:30 GMT 2024","Tue Jun 04 18:46:33 GMT 2024","3296","","","","ProjectTests","ProjectExistsAfterRefusalDeleteIt","ProjectExistsAfterRefusalDeleteIt","Verifying if the project is in the list if you refused to delete it"
+"passed","Tue Jun 04 18:46:25 GMT 2024","Tue Jun 04 18:46:30 GMT 2024","5293","","","","ProjectTests","AddProjectWithEmptyName","AddProjectWithEmptyName","Verifying the error message when trying to create a project with an empty name"
+"passed","Tue Jun 04 18:46:25 GMT 2024","Tue Jun 04 18:46:31 GMT 2024","6583","","","","ProjectTests","MessageInProjectDelConformationWindow","MessageInProjectDelConformationWindow","Verifying the message text in the project deletion confirmation window"
+"passed","Tue Jun 04 18:46:25 GMT 2024","Tue Jun 04 18:46:31 GMT 2024","6495","","","","ProjectTests","AddProjectWithModel","AddProjectWithModel","Verifying a project with model data has been added"
