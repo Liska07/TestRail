@@ -9,10 +9,20 @@ namespace TestRail.Utils
         private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
         private static AppSettings ReadConfiguration()
         {
-            var appSettingsPath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? throw new Exception("Couldn't get directory name"),
+            var appSettingsPath = Path.Combine(
+                Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)
+                ?? throw new InvalidOperationException("Failed to determine the directory of the executing assembly."),
                 "appsettings.json");
+
+            if (!File.Exists(appSettingsPath))
+            {
+                throw new FileNotFoundException($"The configuration file 'appsettings.json' was not found at path: {appSettingsPath}");
+            }
+
             var appSettingsText = File.ReadAllText(appSettingsPath);
-            return JsonSerializer.Deserialize<AppSettings>(appSettingsText) ?? throw new Exception($"Couldn't find file ");
+
+            return JsonSerializer.Deserialize<AppSettings>(appSettingsText) 
+                ?? throw new InvalidOperationException("Failed to deserialize the application settings from 'appsettings.json'.");
         }
 
         public static string GetBaseURL()
@@ -33,8 +43,8 @@ namespace TestRail.Utils
 
             if (timeout == null)
             {
-                _logger.Error("Timeout in AppSettings is null!");
-                throw new Exception("Timeout in AppSettings is null!");
+                _logger.Error("Timeout in AppSettings is null.");
+                throw new Exception("Timeout in AppSettings is null.");
             }
             return timeout.Value;
         }
@@ -45,8 +55,8 @@ namespace TestRail.Utils
 
             if (browserType == null)
             {
-                _logger.Error("BrowserType in AppSettings is null!");
-                throw new Exception("BrowserType in AppSettings is null!");
+                _logger.Error("BrowserType in AppSettings is null.");
+                throw new Exception("BrowserType in AppSettings is null.");
             }
             return browserType.ToLower();
         }
