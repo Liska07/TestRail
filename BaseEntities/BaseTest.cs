@@ -81,10 +81,5 @@ namespace TestRail.BaseEntities
             byte[] screenshotByte = screenshot.AsByteArray;
             AllureApi.AddAttachment(name, "image/png", screenshotByte);
         }
-
-        protected string CreateProjectName()
-        {
-            return "EAntonova_UI " + Guid.NewGuid();
-        }
     }
 }

@@ -2,6 +2,7 @@
 using Allure.NUnit.Attributes;
 using TestRail.BaseEntities;
 using TestRail.Models;
+using TestRail.Utils;
 
 namespace TestRail.Tests.UI
 {
@@ -22,7 +23,7 @@ namespace TestRail.Tests.UI
         [AllureStory("Add a project")]
         public void AddProjectWithModel()
         {
-            string projectName = CreateProjectName();
+            string projectName = NameGenerator.CreateProjectName();
             ProjectModel projectInfo = new ProjectModel(projectName)
             {
                 Announcement = "Test announcement",
@@ -58,7 +59,7 @@ namespace TestRail.Tests.UI
         [AllureStory("Delete a project")]
         public void DeleteAddedProject()
         {
-            string projectName = CreateProjectName();
+            string projectName = NameGenerator.CreateProjectName();
             string expectedMessageText = "Successfully deleted the project.";
 
             projectStep.AddProjectWithModel(new ProjectModel(projectName));
@@ -78,7 +79,7 @@ namespace TestRail.Tests.UI
         [AllureStory("Delete a project")]
         public void MessageInProjectDelConformationWindow()
         {
-            string projectName = CreateProjectName();
+            string projectName = NameGenerator.CreateProjectName();
             string expectedConformationTitleText = "Confirmation";
             string expectedTopMessageText = $"Really delete project {projectName}? This also deletes all test cases and results and everything else that is part of this project. This cannot be undone.";
             string expectedExtraMessageText = "Deleting a project is a high impact and irrevocable action. " +
@@ -105,7 +106,7 @@ namespace TestRail.Tests.UI
         [AllureStory("Delete a project")]
         public void ProjectExistsAfterRefusalDeleteIt()
         {
-            string projectName = CreateProjectName();
+            string projectName = NameGenerator.CreateProjectName();
 
             projectStep.AddProjectWithModel(new ProjectModel(projectName));
             navigationStep.NavigateToProjectList();
