@@ -1,0 +1,1 @@
+2024/06/07 13:56:17.853|INFO|Attached a screenshot to Allure     
