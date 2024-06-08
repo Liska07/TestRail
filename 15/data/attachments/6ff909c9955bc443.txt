@@ -1,0 +1,3 @@
+2024/06/08 13:56:43.625|INFO|Successful login     
+2024/06/08 13:56:45.023|INFO|Added EAntonova 39173600-fc62-4963-880b-9038817fcf3d project     
+2024/06/08 13:56:46.036|INFO|Deleted EAntonova 39173600-fc62-4963-880b-9038817fcf3d project     
