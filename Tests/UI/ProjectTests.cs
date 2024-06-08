@@ -17,7 +17,7 @@ namespace TestRail.Tests.UI
 
         [Test]
         [Category("SmokeTests")]
-        [AllureDescription("Verifying a project with model data has been added")]
+        [AllureDescription("Verifying for adding a project with model data")]
         [AllureSeverity(SeverityLevel.critical)]
         [AllureStory("Add a project")]
         public void AddProjectWithModel()
@@ -119,7 +119,12 @@ namespace TestRail.Tests.UI
             projectStep.ClickDeleteButtonByProjectName(projectName);
             confirmationPage.CancelButton().Click();
 
-            Assert.That(projectStep.IsProjectInList(projectName));
+
+            Assert.Multiple(() =>
+            {
+                Assert.That(projectStep.IsProjectInList(projectName));
+                Assert.That(projectApiStep.IsProjectInList(projectName));
+            });
         }
     }
 }

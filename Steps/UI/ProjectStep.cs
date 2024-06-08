@@ -45,7 +45,7 @@ namespace TestRail.Steps.UI
             return projectListPage;
         }
 
-        public ConfirmationPage ClickDeleteButtonByProjectName(string projectName)
+        public ConfirmationProjectPage ClickDeleteButtonByProjectName(string projectName)
         {
             projectListPage.GetDeleteButtonByProjectName(projectName).Click();
             return confirmationPage;

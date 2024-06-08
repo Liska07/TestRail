@@ -1,0 +1,27 @@
+﻿[
+  {
+    "name": "EAntonova Project Full",
+    "announcement": "This is a full test project announcement.",
+    "show_announcement": true,
+    "suite_mode": 1,
+    "case_statuses_enabled": true
+  },
+  {
+    "name": "EAntonova Project Empty Fields. Checkboxes = false",
+    "announcement": null,
+    "show_announcement": false,
+    "suite_mode": 2,
+    "case_statuses_enabled": false
+  },
+  {
+    "name": "EAntonova Project Empty Fields. Checkboxes = null",
+    "suite_mode": 2
+  },
+  {
+    "name": "EAntonova Project with a Very Long Name to Test Boundary Conditions in the System",
+    "announcement": "This is a very long announcement text that is used to test the boundary conditions for the announcement field in the system. Ensuring that the system can handle long text inputs gracefully without any issues, this announcement is intentionally made verbose. Here is some more text to make it even longer. Testing the system ability to manage large strings is critical. If the system can handle this length without crashing, it can be considered robust. Add even more text to ensure we reach a significant length.",
+    "show_announcement": true,
+    "suite_mode": 3,
+    "case_statuses_enabled": true
+  }
+]

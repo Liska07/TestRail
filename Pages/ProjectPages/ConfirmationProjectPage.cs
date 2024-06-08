@@ -4,7 +4,7 @@ using TestRail.Elements;
 
 namespace TestRail.Pages.ProjectPages
 {
-    public class ConfirmationPage : BasePage
+    public class ConfirmationProjectPage : BasePage
     {
         private static readonly By _titleBy = By.Id("ui-dialog-title-deleteDialog");
         private static readonly By _topMessageBy = By.XPath("//*[@id='deleteDialog']//p[contains(@class, 'top')]");
@@ -15,7 +15,7 @@ namespace TestRail.Pages.ProjectPages
         private static readonly By _cancelButtonBy = By.XPath("//*[@id='deleteDialog']//*[contains(@class, 'button-cancel')]");
         private const string _endPoint = "";
 
-        public ConfirmationPage(IWebDriver driver) : base(driver)
+        public ConfirmationProjectPage(IWebDriver driver) : base(driver)
         {
         }
         public string GetTitleText() => new Message(driver, _titleBy).Text;
@@ -25,6 +25,7 @@ namespace TestRail.Pages.ProjectPages
         public Checkbox IsDeleteProjectCheckbox() => new Checkbox(driver, _isDeleteProgectCheckboxBy);
         public Button OkButton() => new Button(driver, _okButtonBy);
         public Button CancelButton() => new Button(driver, _cancelButtonBy);
+
         public override string GetEndpoint()
         {
             return _endPoint;
