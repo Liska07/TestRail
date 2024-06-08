@@ -6,7 +6,7 @@ using TestRail.Utils;
 namespace TestRail.Tests.UI
 {
     [Category("LoginTests")]
-    [AllureFeature("Login")]
+    [AllureFeature("LoginTests")]
     public class LoginTests : BaseTest
     {
         [Test]

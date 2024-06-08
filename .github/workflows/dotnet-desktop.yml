@@ -12,6 +12,7 @@ on:
        - Smoke
        - Login
        - Project
+       - Milestone
        - Cleaner
  
   schedule:
@@ -63,6 +64,11 @@ jobs:
     - name: Execute Project Tests
       if: github.event.inputs.test_category == 'Project'
       run: dotnet test --filter Category=ProjectTests
+
+    # Execute milestone tests
+    - name: Execute Milestone Tests
+      if: github.event.inputs.test_category == 'Milestone'
+      run: dotnet test --filter Category=MilestoneTests
 
     # Execute cleaner tests
     - name: Execute Cleaner Tests

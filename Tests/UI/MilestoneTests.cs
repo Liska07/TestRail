@@ -1,8 +1,14 @@
-﻿using TestRail.BaseEntities;
+﻿using Allure.Net.Commons;
+using Allure.NUnit.Attributes;
+using TestRail.BaseEntities;
 using TestRail.Models;
+using TestRail.Utils;
 
 namespace TestRail.Tests.UI
 {
+    [Category("ProjectTests")]
+    [Category("MilestoneTests")]
+    [AllureFeature("MilestoneTests")]
     public class MilestoneTests : BaseTest
     {
         private ProjectModel _addedProject;
@@ -17,10 +23,14 @@ namespace TestRail.Tests.UI
         }
 
         [Test]
+        [Category("SmokeTests")]
+        [AllureDescription("Verifying for adding a milestone with model data")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [AllureStory("Add a milestone")]
         public void AddMilestone()
         {
             string expectedMessageText = "Successfully added the new milestone.";
-            string milestoneName = "Release " + Guid.NewGuid();
+            string milestoneName = NameGenerator.CreateMilestoneName();
             var mailstoneInfo = new MilestoneModel(milestoneName)
             {
                 Description = "Test Milestone Description"
@@ -39,7 +49,7 @@ namespace TestRail.Tests.UI
         public void DeleteAddedMilestone()
         {
             string expectedMessageText = "Successfully deleted the milestone (s).";
-            string milestoneName = "Release " + Guid.NewGuid();
+            string milestoneName = NameGenerator.CreateMilestoneName();
             var mailstoneInfo = new MilestoneModel(milestoneName)
             {
                 Description = "Test Milestone Description"
