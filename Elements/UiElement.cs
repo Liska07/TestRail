@@ -108,7 +108,7 @@ namespace TestRail.Elements
             _element.SendKeys(text);
             try
             {
-                if (_element.GetAttribute("value") != text)
+                if (_element.GetAttribute("value") != null && _element.GetAttribute("value") != text)
                 {
                     _actions
                         .MoveToElement(_element)

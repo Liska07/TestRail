@@ -9,6 +9,7 @@ using TestRail.Utils;
 namespace TestRail.Tests.API
 {
     [Category("ProjectTests")]
+    [AllureFeature("Project")]
     public class ApiProjectTests : BaseApiTest
     {
         [Test]

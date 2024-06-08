@@ -15,6 +15,7 @@ namespace TestRail.BaseEntities
         protected UserStep userStep;
         protected ProjectStep projectStep;
         protected NavigationStep navigationStep;
+        protected MilestoneStep milestoneStep;
         //Pages
         protected LoginPage loginPage;
         protected DashboardPage dashboardPage;
@@ -32,6 +33,7 @@ namespace TestRail.BaseEntities
             userStep = new UserStep(driver);
             projectStep = new ProjectStep(driver);
             navigationStep = new NavigationStep(driver);
+            milestoneStep = new MilestoneStep(driver);
             //Pages
             loginPage = new LoginPage(driver);
             dashboardPage = new DashboardPage(driver);

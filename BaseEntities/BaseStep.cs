@@ -1,6 +1,7 @@
 ﻿using NLog;
 using OpenQA.Selenium;
 using TestRail.Pages;
+using TestRail.Pages.MilestonePages;
 using TestRail.Pages.ProjectPages;
 
 namespace TestRail.BaseEntities
@@ -13,6 +14,7 @@ namespace TestRail.BaseEntities
         protected AddProjectPage addProjectPage;
         protected ProjectListPage projectListPage;
         protected ConfirmationProjectPage confirmationPage;
+        protected ConfirmationMilestonePage confirmationMilestonePage;
         protected readonly Logger logger = LogManager.GetCurrentClassLogger();
         public BaseStep(IWebDriver driver)
         {
@@ -22,6 +24,7 @@ namespace TestRail.BaseEntities
             addProjectPage = new AddProjectPage(driver);
             projectListPage = new ProjectListPage(driver);
             confirmationPage = new ConfirmationProjectPage(driver);
+            confirmationMilestonePage = new ConfirmationMilestonePage(driver);
         }
     }
 }
