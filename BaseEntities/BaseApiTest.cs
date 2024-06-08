@@ -25,7 +25,6 @@ namespace TestRail.BaseEntities
         protected readonly Logger logger = LogManager.GetCurrentClassLogger();
 
         [OneTimeSetUp]
-        [AllureBefore("Clear allure-results directory")]
         public static void OneTimeSetUp()
         {
             AllureLifecycle.Instance.CleanupResultDirectory();

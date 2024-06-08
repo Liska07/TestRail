@@ -20,7 +20,7 @@ namespace TestRail.Tests.UI
         [AllureDescription("Verifying for adding a project with model data")]
         [AllureSeverity(SeverityLevel.critical)]
         [AllureStory("Add a project")]
-        public void AddProjectWithModel()
+        public void SuccessfulProjectAddition()
         {
             string projectName = NameGenerator.CreateProjectName();
             ProjectModel projectInfo = new ProjectModel(projectName)
@@ -48,7 +48,7 @@ namespace TestRail.Tests.UI
         [AllureDescription("Verifying the error message when trying to create a project with an empty name")]
         [AllureSeverity(SeverityLevel.critical)]
         [AllureStory("Add a project")]
-        public void AddProjectWithEmptyName()
+        public void CheckMessageAddingProjectWithEmptyName()
         {
             string expectedErrorMessageText = "Field Name is a required field.";
 
@@ -63,7 +63,7 @@ namespace TestRail.Tests.UI
         [AllureDescription("Verifying an added project has been deleted")]
         [AllureSeverity(SeverityLevel.critical)]
         [AllureStory("Delete a project")]
-        public void DeleteAddedProject()
+        public void SuccessfulDeletionAddedProject()
         {
             string projectName = NameGenerator.CreateProjectName();
             string expectedMessageText = "Successfully deleted the project.";
@@ -83,7 +83,7 @@ namespace TestRail.Tests.UI
         [AllureDescription("Verifying the message text in the project deletion confirmation window")]
         [AllureSeverity(SeverityLevel.normal)]
         [AllureStory("Delete a project")]
-        public void MessageInProjectDelConformationWindow()
+        public void CheckMessageInProjectDelConformationWindow()
         {
             string projectName = NameGenerator.CreateProjectName();
             string expectedConformationTitleText = "Confirmation";
@@ -110,7 +110,7 @@ namespace TestRail.Tests.UI
         [AllureDescription("Verifying if the project is in the list if you refused to delete it")]
         [AllureSeverity(SeverityLevel.critical)]
         [AllureStory("Delete a project")]
-        public void ProjectExistsAfterRefusalDeleteIt()
+        public void CheckExistenceProjectAfterRefusalDeleteIt()
         {
             string projectName = NameGenerator.CreateProjectName();
 

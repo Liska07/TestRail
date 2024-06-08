@@ -4,6 +4,7 @@ using System.Net;
 using System.Text.Json;
 using TestRail.BaseEntities;
 using TestRail.Models;
+using TestRail.Utils;
 
 namespace TestRail.Tests.API
 {
@@ -16,7 +17,7 @@ namespace TestRail.Tests.API
         [AllureSeverity(SeverityLevel.critical)]
         [AllureStory("Add a project")]
         [TestCaseSource(nameof(ProjectPositiveTestCases))]
-        public void AddProjectWithFileTestCaseAPI(ProjectModel expectedProject)
+        public void SuccessfulProjectAdditionAPI(ProjectModel expectedProject)
         {
             var response = projectApiStep.AddProject(expectedProject);
             var actualProject = projectApiStep.GetProjectModelFromResponse(response);
@@ -45,7 +46,7 @@ namespace TestRail.Tests.API
         [AllureDescription("Verifying a response with invalid data")]
         [AllureSeverity(SeverityLevel.critical)]
         [TestCaseSource(nameof(ProjectNegativeTestCases))]
-        public void NegativeAddProjectTestAPI(Dictionary<string, object> project, string expectedResponseContent)
+        public void NegativeProjectAdditionAPI(Dictionary<string, object> project, string expectedResponseContent)
         {
             const string endPoint = "/index.php?/api/v2/add_project";
 
@@ -75,7 +76,7 @@ namespace TestRail.Tests.API
              {
                 new Dictionary<string, object>
                 {
-                    {"name", $"EAntonova + {Guid.NewGuid()}" },
+                    {"name", NameGenerator.CreateProjectName()},
                     {"announcement", "test announcement" },
                     {"show_announcement", true },
                     {"suite_mode", 4 }
@@ -83,5 +84,60 @@ namespace TestRail.Tests.API
                 "{\"error\":\"Field :suite_mode is not a supported enum value (\\\"4\\\").\"}"
              },
         };
+
+        [Test]
+        [AllureStory("Delete a project")]
+        [Category("SmokeTests")]
+        [AllureDescription("Verifying an added project has been deleted")]
+        [AllureSeverity(SeverityLevel.critical)]
+        public void SuccessfulDeletionAddedProjectAPI()
+        {
+            ProjectModel createdProject = projectApiStep.AddProjectAndReturnIt(new ProjectModel($"EAntonova + {Guid.NewGuid()}"));
+
+            var response = projectApiStep.DeleteProject(createdProject);
+
+            Assert.Multiple(() =>
+            {
+                Assert.That(response.StatusCode == HttpStatusCode.OK);
+                Assert.That(!projectApiStep.IsProjectInList(createdProject.GetId()));
+            });
+        }
+
+        [Test]
+        [AllureStory("Update a project")]
+        [Category("SmokeTests")]
+        [AllureDescription("Verifying an added project has been updeleted")]
+        [AllureSeverity(SeverityLevel.critical)]
+        public void SuccessfulUpdateAddedProjectAPI()
+        {
+            ProjectModel baseProjectInfo = new ProjectModel("EAntonova Base Project Name")
+            {
+                Announcement = "Base Project Announcement",
+                IsShowAnnouncement = false,
+                ProjectTypeByValue = 1,
+                IsEnableTestCase = false,
+            };
+
+            ProjectModel baseProject = projectApiStep.AddProjectAndReturnIt(baseProjectInfo);
+
+            ProjectModel updatedProjectInfo = new ProjectModel("EAntonova Updated Project Name")
+            {
+                Announcement = "Updated Project Announcement",
+                IsShowAnnouncement = true,
+                ProjectTypeByValue = 1,
+                IsEnableTestCase = true,
+            };
+
+            var response = projectApiStep.UpdateProject(baseProject, updatedProjectInfo);
+
+            ProjectModel updatedProject = projectApiStep.GetProjectModelFromResponse(response);
+
+            Assert.Multiple(() =>
+            {
+                Assert.That(response.StatusCode == HttpStatusCode.OK);
+                Assert.That(updatedProject.IsEqual(updatedProjectInfo));
+                Assert.That(projectApiStep.IsProjectInList(updatedProject.GetId()));
+            });
+        }
     }
 }
