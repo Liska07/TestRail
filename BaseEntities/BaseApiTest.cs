@@ -3,8 +3,8 @@ using Allure.NUnit;
 using Allure.Net.Commons;
 using NLog;
 using RestSharp;
-using System.Reflection;
 using TestRail.Services.API;
+using TestRail.Steps.API;
 using TestRail.Utils;
 
 namespace TestRail.BaseEntities
@@ -20,7 +20,7 @@ namespace TestRail.BaseEntities
     {
         protected RestClient client;
         protected ApiService apiService;
-        //protected ProjectApiStep projectApiStep;
+        protected ProjectApiStep projectApiStep;
         //protected MilestoneApiStep milestoneApiStep;
         protected readonly Logger logger = LogManager.GetCurrentClassLogger();
 
@@ -41,7 +41,7 @@ namespace TestRail.BaseEntities
                 EnvironmentHelper.GetEnvironmentVariableOrThrow("TESTRAIL_USERNAME"),
                 EnvironmentHelper.GetEnvironmentVariableOrThrow("TESTRAIL_PASSWORD"));
 
-            //projectApiStep = new ProjectApiStep(client, apiService);
+            projectApiStep = new ProjectApiStep(client, apiService);
             //milestoneApiStep = new MilestoneApiStep(client, apiService);
         }
 

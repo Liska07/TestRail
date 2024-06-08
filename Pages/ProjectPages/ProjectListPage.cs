@@ -34,19 +34,6 @@ namespace TestRail.Pages.ProjectPages
             }
         }
 
-        public bool IsProjectInList(string projectName)
-        {
-            var projectList = driver.FindElements(By.XPath($"//a[text()='{projectName}']"));
-            if (projectList.Count == 0)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
-
         public ReadOnlyCollection<IWebElement> GetProgectListByPartialName(string projectName)
         {
             var projectList = driver.FindElements(By.XPath($"//a[contains(text(),'{projectName}')]"));
@@ -57,5 +44,7 @@ namespace TestRail.Pages.ProjectPages
         {
             return new Button(driver, By.XPath($"//a[contains(text(),'{projectName}')]/ancestor::tr//div[@data-testid='projectDeleteButton']"));
         }
+
+
     }
 }

@@ -60,5 +60,18 @@ namespace TestRail.Steps.UI
             logger.Info($"Deleted {projectName} project");
             return projectListPage;
         }
+
+        public bool IsProjectInList(string projectName)
+        {
+            var projectList = driver.FindElements(By.XPath($"//a[text()='{projectName}']"));
+            if (projectList.Count == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 }

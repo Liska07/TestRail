@@ -33,13 +33,13 @@ namespace TestRail.Tests.UI
 
             projectStep.AddProjectWithModel(projectInfo);
             navigationStep.NavigateToProjectList();
-            //ProjectModel addedProject = projectApiSteps.GetProjectByItsName(projectName);
+            ProjectModel addedProject = projectApiStep.GetProjectByItsName(projectName);
 
             Assert.Multiple(() =>
             {
-                Assert.That(projectListPage.IsProjectInList(projectName));
-                //Assert.That(projectApiStep.IsProjectInListByName(projectName));
-                //Assert.That(addedProject.IsEqual(projectInfo));
+                Assert.That(projectStep.IsProjectInList(projectName));
+                Assert.That(projectApiStep.IsProjectInList(projectName));
+                Assert.That(addedProject.IsEqual(projectInfo));
             });
         }
 
@@ -75,7 +75,7 @@ namespace TestRail.Tests.UI
             Assert.Multiple(() =>
             {
                 Assert.That(projectListPage.GetMessageText(), Is.EqualTo(expectedMessageText));
-                Assert.That(!projectListPage.IsProjectInList(projectName));
+                Assert.That(!projectApiStep.IsProjectInList(projectName));
             });
         }
 
@@ -119,7 +119,7 @@ namespace TestRail.Tests.UI
             projectStep.ClickDeleteButtonByProjectName(projectName);
             confirmationPage.CancelButton().Click();
 
-            Assert.That(projectListPage.IsProjectInList(projectName));
+            Assert.That(projectStep.IsProjectInList(projectName));
         }
     }
 }

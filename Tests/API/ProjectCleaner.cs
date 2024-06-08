@@ -6,21 +6,21 @@ using TestRail.Models;
 namespace TestRail.Tests.API
 {
     [Category("ProjectCleaner")]
-    public class ProjectCleaner : BaseTest
+    public class ProjectCleaner : BaseApiTest
     {
         //[Test]
-        //[NonParallelizable] //Runs after all tests
-        //[AllureDescription("Used to delete all my projects")]
-        //public void DeleteAllMyProjects()
-        //{
-        //    string projectName = "EAntonova";
+        [NonParallelizable] //Runs after all tests
+        [AllureDescription("Used to delete all my projects")]
+        public void DeleteAllMyProjects()
+        {
+            string projectName = "EAntonova";
 
-        //    List<ProjectModel> projects = projectApiStep.GetProjectsListByProjectName(projectName);
+            List<ProjectModel> projects = projectApiStep.GetProjectsListByProjectName(projectName);
 
-        //    foreach (ProjectModel project in projects)
-        //    {
-        //        projectApiStep.DeleteProject(project);
-        //    }
-        //}
+            foreach (ProjectModel project in projects)
+            {
+                projectApiStep.DeleteProject(project);
+            }
+        }
     }
 }
