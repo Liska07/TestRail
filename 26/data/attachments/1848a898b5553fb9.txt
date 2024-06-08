@@ -1,0 +1,7 @@
+2024/06/08 21:22:19.460|INFO|Successful login     
+2024/06/08 21:22:20.145|INFO|Added a project: {"id":210,"name":"EAntonova 94908813-3b6f-4d62-8068-84ed963bae36","announcement":null,"show_announcement":false,"is_completed":false,"completed_on":null,"suite_mode":3,"default_role_id":null,"case_statuses_enabled":false,"url":"https:\/\/liska01.testrail.io\/index.php?\/projects\/overview\/210","users":[],"groups":[]}. StatusCode.OK     
+2024/06/08 21:22:21.124|ERROR|Actions 'Send keys' cannot be performed! System.ArgumentException: The key value must not be null or empty (Parameter 'keysToSend')
+   at OpenQA.Selenium.Interactions.Actions.SendKeys(IWebElement element, String keysToSend)
+   at OpenQA.Selenium.Interactions.Actions.SendKeys(String keysToSend)
+   at TestRail.Elements.UiElement.SendKeys(String text) in /home/runner/work/TestRail/TestRail/Elements/UiElement.cs:line 113     
+2024/06/08 21:22:21.175|INFO|Attached a screenshot to Allure     
