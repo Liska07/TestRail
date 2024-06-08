@@ -1,0 +1,5 @@
+"Epic","Feature","Story","FAILED","BROKEN","PASSED","SKIPPED","UNKNOWN"
+"TestRail","Basic Functionality","Add a project","0","0","8","0","0"
+"TestRail","Basic Functionality","Delete a project","0","0","4","0","0"
+"TestRail","Basic Functionality","Login","0","1","7","0","0"
+"TestRail","Basic Functionality","Update a project","0","0","1","0","0"
