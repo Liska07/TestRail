@@ -54,7 +54,7 @@ namespace TestRail.Tests.UI
         [Category("SmokeTests")]
         [AllureDescription("Check the error messages if username or password are incorrect")]
         [AllureSeverity(SeverityLevel.critical)]
-        [TestCaseSource(nameof(TestCases))]
+        [TestCaseSource(nameof(TestCasesForLoginWithWrongData))]
         public void LoginWithWrongUserNameOrPassword(string userName, string password)
         {
             string expectedTopErrorText = "Sorry, there was a problem.";
@@ -69,13 +69,13 @@ namespace TestRail.Tests.UI
             });
         }
 
-        private static readonly object[] TestCases =
-        {
-            new string[] { EnvironmentHelper.GetEnvironmentVariableOrThrow("TESTRAIL_USERNAME"),  "12345"},
-            new string[] { "WrongUserName", EnvironmentHelper.GetEnvironmentVariableOrThrow("TESTRAIL_PASSWORD")},
-            new string[] { "' OR '1'='1", "' OR '1'='1" },
-            new string[] { "<script>alert(1)</script>", "<script>alert(1)</script>" }
-        };
+        private static readonly string[][] TestCasesForLoginWithWrongData =
+        [
+            [EnvironmentHelper.GetEnvironmentVariableOrThrow("TESTRAIL_USERNAME"), "12345"],
+            ["WrongUserName", EnvironmentHelper.GetEnvironmentVariableOrThrow("TESTRAIL_PASSWORD")],
+            ["' OR '1'='1", "' OR '1'='1"],
+            ["<script>alert(1)</script>", "<script>alert(1)</script>"]
+        ];
 
         [Test]
         [AllureDescription("Check the error messages if username is empty and password is less than 5 characters")]

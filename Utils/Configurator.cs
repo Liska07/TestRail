@@ -9,20 +9,35 @@ namespace TestRail.Utils
         private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
         private static AppSettings ReadConfiguration()
         {
-            var appSettingsPath = Path.Combine(
-                Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)
-                ?? throw new InvalidOperationException("Failed to determine the directory of the executing assembly."),
-                "appsettings.json");
+            string? directory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            if (directory == null)
+            {
+                string errorMessage = "Failed to determine the directory of the executing assembly.";
+                _logger.Error(errorMessage);
+                throw new InvalidOperationException(errorMessage);
+            }
+
+            var appSettingsPath = Path.Combine(directory, "appsettings.json");
 
             if (!File.Exists(appSettingsPath))
             {
-                throw new FileNotFoundException($"The configuration file 'appsettings.json' was not found at path: {appSettingsPath}");
+                string errorMessage = $"The configuration file 'appsettings.json' was not found at path: {appSettingsPath}";
+                _logger.Error(errorMessage);
+                throw new FileNotFoundException(errorMessage);
             }
 
             var appSettingsText = File.ReadAllText(appSettingsPath);
 
-            return JsonSerializer.Deserialize<AppSettings>(appSettingsText) 
-                ?? throw new InvalidOperationException("Failed to deserialize the application settings from 'appsettings.json'.");
+            var appSettings = JsonSerializer.Deserialize<AppSettings>(appSettingsText);
+
+            if (appSettings == null)
+            {
+                string errorMessage = "Failed to deserialize the application settings from 'appsettings.json'.";
+                _logger.Error(errorMessage);
+                throw new InvalidOperationException(errorMessage);
+            }
+
+            return appSettings;
         }
 
         public static string GetBaseURL()
@@ -31,8 +46,9 @@ namespace TestRail.Utils
 
             if (string.IsNullOrEmpty(baseUrl))
             {
-                _logger.Error("TestRailBaseURL in AppSettings is not configured or is null.");
-                throw new InvalidOperationException("TestRailBaseURL in AppSettings is not configured or is null.");
+                string errorMessage = "TestRailBaseURL in AppSettings is not configured or is null.";
+                _logger.Error(errorMessage);
+                throw new InvalidOperationException(errorMessage);
             }
             return baseUrl;
         }
@@ -43,8 +59,9 @@ namespace TestRail.Utils
 
             if (timeout == null)
             {
-                _logger.Error("Timeout in AppSettings is null.");
-                throw new Exception("Timeout in AppSettings is null.");
+                string errorMessage = "Timeout in AppSettings is null.";
+                _logger.Error(errorMessage);
+                throw new InvalidOperationException(errorMessage);
             }
             return timeout.Value;
         }
@@ -55,8 +72,9 @@ namespace TestRail.Utils
 
             if (browserType == null)
             {
-                _logger.Error("BrowserType in AppSettings is null.");
-                throw new Exception("BrowserType in AppSettings is null.");
+                string errorMessage = "BrowserType in AppSettings is null.";
+                _logger.Error(errorMessage);
+                throw new InvalidOperationException(errorMessage);
             }
             return browserType.ToLower();
         }

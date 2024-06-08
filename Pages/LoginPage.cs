@@ -18,9 +18,9 @@ namespace TestRail.Pages
         public LoginPage(IWebDriver driver, bool openPageByUrl = false) : base(driver, openPageByUrl)
         {
         }
-        public UiElement UserNameField() => new UiElement(driver, _userNameFieldBy);
+        public Field UserNameField() => new Field(driver, _userNameFieldBy);
         public string GetUserNameErrorMessageText() => new Message(driver, _userNameErrorMessageBy).Text;
-        public UiElement PasswordFeld() => new UiElement(driver, _passwordFeldBy);
+        public Field PasswordFeld() => new Field(driver, _passwordFeldBy);
         public string GetPasswordErrorMessageText() => new Message(driver, _passwordErrorMessageBy).Text;
         public Button LoginButton() => new Button(driver, _loginButtonBy);
         public string GetTopErrorMessageText() => new Message(driver, _topErrorMessageBy).Text;

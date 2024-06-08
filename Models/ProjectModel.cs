@@ -17,8 +17,9 @@ namespace TestRail.Models
         {
             if (string.IsNullOrEmpty(name))
             {
-                _logger.Error("The name of the project can't be empty!");
-                throw new ArgumentNullException("The name of the project can't be empty!");
+                string errorMessage = "The name of the project can't be empty.";
+                _logger.Error(errorMessage);
+                throw new ArgumentNullException(errorMessage);
             }
             else
             {
@@ -29,15 +30,28 @@ namespace TestRail.Models
         public override string ToString()
         {
             return $"{nameof(Id)}: {Id}, {nameof(Name)}: {Name}, {nameof(Announcement)}: {Announcement}, " +
-                   $"{nameof(IsShowAnnouncement)}: {IsShowAnnouncement}, {nameof(ProjectTypeByValue)}: {ProjectTypeByValue}";
+                   $"{nameof(IsShowAnnouncement)}: {IsShowAnnouncement}, {nameof(ProjectTypeByValue)}: {ProjectTypeByValue}" +
+                   $"{nameof(IsEnableTestCase)}: {IsEnableTestCase}";
         }
 
         public bool IsEqual(ProjectModel projectModel)
         {
-            return Name == projectModel.Name && Announcement == projectModel.Announcement &&
+            return Name == projectModel.Name && 
+                   Announcement == projectModel.Announcement &&
                    IsShowAnnouncement == projectModel.IsShowAnnouncement &&
                    ProjectTypeByValue == projectModel.ProjectTypeByValue &&
                    IsEnableTestCase == projectModel.IsEnableTestCase;
+        }
+
+        public int GetId()
+        {
+            if (Id == null)
+            {
+                string errorMessage = "Project Id is null.";
+                _logger.Error(errorMessage);
+                throw new InvalidOperationException(errorMessage);
+            }
+            return Id.Value;
         }
     }
 }

@@ -19,8 +19,8 @@ namespace TestRail.Pages.ProjectPages
         {
         }
 
-        public UiElement NameField() => new UiElement(driver, _nameFieldBy);
-        public UiElement AnnouncementField() => new UiElement(driver, _announcementFieldBy);
+        public Field NameField() => new Field(driver, _nameFieldBy);
+        public Field AnnouncementField() => new Field(driver, _announcementFieldBy);
         public Checkbox IsShowAnnouncementCheckbox() => new Checkbox(driver, _isShowAnnouncementCheckboxBy);
         public RadioButton ProjectTypeRadioButton() => new RadioButton(driver, _projectTypeRadioButtonBy);
         public Checkbox IsEnableTestCaseCheckbox() => new Checkbox(driver, _isEnableTestCaseCheckboxBy);

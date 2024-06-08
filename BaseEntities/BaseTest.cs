@@ -19,15 +19,17 @@ namespace TestRail.BaseEntities
     public class BaseTest
     {
         protected IWebDriver driver;
+        protected readonly Logger logger = LogManager.GetCurrentClassLogger();
+        //Steps
         protected UserStep userStep;
         protected ProjectStep projectStep;
         protected NavigationStep navigationStep;
+        //Pages
         protected LoginPage loginPage;
         protected DashboardPage dashboardPage;
         protected AddProjectPage addProjectPage;
         protected ProjectListPage projectListPage;
         protected ConfirmationPage confirmationPage;
-        protected readonly Logger logger = LogManager.GetCurrentClassLogger();
 
         [OneTimeSetUp]
         [AllureBefore("Clear allure-results directory")]
@@ -42,9 +44,11 @@ namespace TestRail.BaseEntities
         {
             driver = new Browser().Driver;
             new LoginPage(driver, true);
+            //Steps
             userStep = new UserStep(driver);
             projectStep = new ProjectStep(driver);
             navigationStep = new NavigationStep(driver);
+            //Pages
             loginPage = new LoginPage(driver);
             dashboardPage = new DashboardPage(driver);
             addProjectPage = new AddProjectPage(driver);

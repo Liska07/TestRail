@@ -26,15 +26,22 @@ namespace TestRail.Tests.UI
             string projectName = NameGenerator.CreateProjectName();
             ProjectModel projectInfo = new ProjectModel(projectName)
             {
-                Announcement = "Test announcement",
+                Announcement = "Test Project Announcement",
                 IsShowAnnouncement = true,
                 ProjectTypeByValue = 1,
                 IsEnableTestCase = true,
             };
 
             projectStep.AddProjectWithModel(projectInfo);
+            navigationStep.NavigateToProjectList();
+            //ProjectModel addedProject = projectApiSteps.GetProjectByItsName(projectName);
 
-            Assert.That(navigationStep.NavigateToProjectList().IsProjectInList(projectName));
+            Assert.Multiple(() =>
+            {
+                Assert.That(projectListPage.IsProjectInList(projectName));
+                //Assert.That(projectApiStep.IsProjectInListByName(projectName));
+                //Assert.That(addedProject.IsEqual(projectInfo));
+            });
         }
 
         [Test]
