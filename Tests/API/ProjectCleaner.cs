@@ -1,5 +1,6 @@
 ﻿using Allure.NUnit.Attributes;
 using TestRail.BaseEntities;
+using TestRail.Models;
 
 
 namespace TestRail.Tests.API
@@ -7,21 +8,19 @@ namespace TestRail.Tests.API
     [Category("ProjectCleaner")]
     public class ProjectCleaner : BaseTest
     {
-        [Test]
-        [NonParallelizable] //Runs after all tests
-        [AllureDescription("Used to delete all my projects")]
-        public void DeleteAllMyProjects()
-        {
-            string projectName = "EAntonova";
-            userStep.SuccessfulLogin();
+        //[Test]
+        //[NonParallelizable] //Runs after all tests
+        //[AllureDescription("Used to delete all my projects")]
+        //public void DeleteAllMyProjects()
+        //{
+        //    string projectName = "EAntonova";
 
-            int quantityMyProjects = navigationStep.NavigateToProjectList().GetProgectListByPartialName(projectName).Count();
-            logger.Info($"Need to delete {quantityMyProjects} my projects");
+        //    List<ProjectModel> projects = projectApiStep.GetProjectsListByProjectName(projectName);
 
-            for (int i = 0; i < quantityMyProjects; i++)
-            {
-                projectStep.DeleteProjectByName(projectName);
-            }
-        }
+        //    foreach (ProjectModel project in projects)
+        //    {
+        //        projectApiStep.DeleteProject(project);
+        //    }
+        //}
     }
 }

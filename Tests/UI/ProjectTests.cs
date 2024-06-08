@@ -7,7 +7,6 @@ using TestRail.Utils;
 namespace TestRail.Tests.UI
 {
     [Category("ProjectTests")]
-    [AllureFeature("Basic Functionality")]
     public class ProjectTests : BaseTest
     {
         [SetUp]

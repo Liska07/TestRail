@@ -1,7 +1,6 @@
 ﻿using Allure.Net.Commons;
 using Allure.NUnit;
 using Allure.NUnit.Attributes;
-using NLog;
 using OpenQA.Selenium;
 using TestRail.Core;
 using TestRail.Pages;
@@ -10,16 +9,9 @@ using TestRail.Steps.UI;
 
 namespace TestRail.BaseEntities
 {
-    [TestFixture]
-    [Parallelizable(ParallelScope.All)]
-    [FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
-    [AllureNUnit]
-    [AllureOwner("EAntonova")]
-    [AllureEpic("TestRail")]
-    public class BaseTest
+    public class BaseTest : BaseApiTest
     {
         protected IWebDriver driver;
-        protected readonly Logger logger = LogManager.GetCurrentClassLogger();
         //Steps
         protected UserStep userStep;
         protected ProjectStep projectStep;
@@ -31,16 +23,9 @@ namespace TestRail.BaseEntities
         protected ProjectListPage projectListPage;
         protected ConfirmationPage confirmationPage;
 
-        [OneTimeSetUp]
-        [AllureBefore("Clear allure-results directory")]
-        public static void OneTimeSetUp()
-        {
-            AllureLifecycle.Instance.CleanupResultDirectory();
-        }
-
         [SetUp]
         [AllureBefore("Set up driver")]
-        public void Setup()
+        public void SetupBaseTest()
         {
             driver = new Browser().Driver;
             new LoginPage(driver, true);
@@ -57,8 +42,8 @@ namespace TestRail.BaseEntities
         }
 
         [TearDown]
-        [AllureAfter("Driver quite")]
-        public void TearDown()
+        [AllureAfter("Driver dispose")]
+        public void TearDownBaseTest()
         {
             try
             {
