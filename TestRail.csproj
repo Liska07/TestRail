@@ -42,7 +42,6 @@
 
   <ItemGroup>
     <Folder Include="Steps\API\" />
-    <Folder Include="Tests\API\" />
   </ItemGroup>
 
 </Project>

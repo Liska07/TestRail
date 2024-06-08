@@ -12,6 +12,7 @@ on:
        - Smoke
        - Login
        - Project
+       - Cleaner
  
   schedule:
     - cron: '55 13 * * *'
@@ -46,22 +47,27 @@ jobs:
     # Execute all tests in the solution
     - name: Execute All tests
       if: ${{ github.event.inputs.test_category == 'All' || github.event_name == 'schedule' }}
-      run: dotnet test
+      run: dotnet test --filter "Category!=ProjectCleaner"
 
     # Execute smoke tests
     - name: Execute Smoke Tests
       if: github.event.inputs.test_category == 'Smoke'
       run: dotnet test --filter Category=SmokeTests
 
-      # Execute login tests
-    - name: Execute Smoke Tests
+    # Execute login tests
+    - name: Execute Login Tests
       if: github.event.inputs.test_category == 'Login'
       run: dotnet test --filter Category=LoginTests
 
-      # Execute project tests
-    - name: Execute Smoke Tests
+    # Execute project tests
+    - name: Execute Project Tests
       if: github.event.inputs.test_category == 'Project'
       run: dotnet test --filter Category=ProjectTests
+
+    # Execute cleaner tests
+    - name: Execute Cleaner Tests
+      if: github.event.inputs.test_category == 'Cleaner'
+      run: dotnet test --filter Category=ProjectCleaner
 
     - name: Load test report history
       uses: actions/checkout@v3
