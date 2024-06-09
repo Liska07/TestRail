@@ -1,2 +1,0 @@
-2024/06/03 19:36:18.413|INFO|Successful login     
-2024/06/03 19:36:19.752|INFO|Added EAntonova_UI f545ab1e-af6b-4596-b24e-2cc419094bce project     
