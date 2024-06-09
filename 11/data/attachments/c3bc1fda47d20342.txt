@@ -1,3 +1,0 @@
-2024/06/04 18:46:28.967|INFO|Successful login     
-2024/06/04 18:46:30.971|INFO|Added EAntonova_UI f4a9695e-0dfb-45a7-a136-256e57d28ded project     
-2024/06/04 18:46:31.973|INFO|Deleted EAntonova_UI f4a9695e-0dfb-45a7-a136-256e57d28ded project     
