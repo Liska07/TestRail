@@ -1,2 +1,0 @@
-2024/06/04 14:02:05.048|INFO|Successful login     
-2024/06/04 14:02:06.229|INFO|Added EAntonova_UI 7563b751-49e0-4d21-8038-9d1c1ff92b4a project     
