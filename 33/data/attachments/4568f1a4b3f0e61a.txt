@@ -1,0 +1,2 @@
+2024/06/09 01:56:39.676|INFO|Added a project: {"id":301,"name":"EAntonova + 34d84b12-75cf-4af1-9826-fd92baa59fb6","announcement":null,"show_announcement":false,"is_completed":false,"completed_on":null,"suite_mode":3,"default_role_id":null,"case_statuses_enabled":false,"url":"https:\/\/liska01.testrail.io\/index.php?\/projects\/overview\/301","users":[],"groups":[]}. StatusCode.OK     
+2024/06/09 01:56:40.062|INFO|Deleted a project with id = 301. StatusCode.OK     
