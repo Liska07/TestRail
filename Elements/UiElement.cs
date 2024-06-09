@@ -105,26 +105,27 @@ namespace TestRail.Elements
 
         public void SendKeys(string text)
         {
+            _element.Click();
             _element.SendKeys(text);
-            //try
-            //{
-            //    if (_element.GetAttribute("value") != null && _element.GetAttribute("value") != text)
-            //    {
-            //        _actions
-            //            .MoveToElement(_element)
-            //            .Click()
-            //            .SendKeys("")
-            //            .SendKeys(text)
-            //            .Build()
-            //            .Perform();
-            //        _logger.Warn("Sent keys using actions");
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    _logger.Error("Actions 'Send keys' cannot be performed! " + ex);
-            //    throw;
-            //}
+            try
+            {
+                if (_element.GetAttribute("value") != null && _element.GetAttribute("value") != text)
+                {
+                    _actions
+                        .MoveToElement(_element)
+                        .Click()
+                        .SendKeys("")
+                        .SendKeys(text)
+                        .Build()
+                        .Perform();
+                    _logger.Warn("Sent keys using actions");
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.Error("Actions 'Send keys' cannot be performed! " + ex);
+                throw;
+            }
         }
 
         public void Submit()

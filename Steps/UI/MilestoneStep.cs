@@ -21,11 +21,17 @@ namespace TestRail.Steps.UI
             milestoneListPage.AddMilestoneButton().Click();
 
             var addMilestonePage = new AddMilestonePage(driver, projectId);
+            Console.WriteLine("milestoneModel.Name: "+ milestoneModel.Name);
+            //addMilestonePage.NameField().Click();
             addMilestonePage.NameField().SendKeys(milestoneModel.Name);
+            Console.WriteLine("addMilestonePage.NameField().GetAttribute: " + addMilestonePage.NameField().GetAttribute("value"));
 
             if (!string.IsNullOrEmpty(milestoneModel.Description))
             {
+                //addMilestonePage.DescriptionField().Click();
+                Console.WriteLine("milestoneModel.Description: " + milestoneModel.Description);
                 addMilestonePage.DescriptionField().SendKeys(milestoneModel.Description);
+                Console.WriteLine("addMilestonePage.Description().GetAttribute: " + addMilestonePage.DescriptionField().GetAttribute("value"));
             }
 
             addMilestonePage.AddMilestoneButton().Click();

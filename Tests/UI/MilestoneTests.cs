@@ -50,10 +50,7 @@ namespace TestRail.Tests.UI
         {
             string expectedMessageText = "Successfully deleted the milestone (s).";
             string milestoneName = NameGenerator.CreateMilestoneName();
-            var mailstoneInfo = new MilestoneModel(milestoneName)
-            {
-                Description = "Test Milestone Description"
-            };
+            var mailstoneInfo = new MilestoneModel(milestoneName);
 
             var milestoneListPage = milestoneStep.AddMilestoneWithModel(_projectId, mailstoneInfo);
             milestoneListPage = navigationStep.NavigateToMilestone(_projectId);

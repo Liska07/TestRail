@@ -18,6 +18,9 @@ namespace TestRail.Elements
         public void Select() => _uiElement.Click();
         public bool Displayed => _uiElement.Displayed;
         public bool Enabled => _uiElement.Enabled;
+        public string Text => _uiElement.Text.Trim();
+
+        public string GetAttribute(string attributeName) => _uiElement.GetAttribute(attributeName);
         public bool IsChecked()
         {
             if (_uiElement.GetAttribute("checked") == null)
