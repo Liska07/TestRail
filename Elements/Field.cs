@@ -1,5 +1,4 @@
-﻿using AngleSharp.Dom;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 
 namespace TestRail.Elements
 {

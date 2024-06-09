@@ -8,14 +8,14 @@ namespace TestRail.Tests.API
     [Category("ProjectCleaner")]
     public class ProjectCleaner : BaseApiTest
     {
-        //[Test]
+        [Test]
         [NonParallelizable] //Runs after all tests
         [AllureDescription("Used to delete all my projects")]
         public void DeleteAllMyProjects()
         {
             string projectName = "EAntonova";
 
-            List<ProjectModel> projects = projectApiStep.GetProjectsListByProjectName(projectName);
+            List<ProjectModel> projects = projectApiStep.GetProjectsListByPartialProjectName(projectName);
 
             foreach (ProjectModel project in projects)
             {

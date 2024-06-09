@@ -1,5 +1,4 @@
-﻿
-using Allure.NUnit.Attributes;
+﻿using Allure.NUnit.Attributes;
 using OpenQA.Selenium;
 using TestRail.BaseEntities;
 using TestRail.Models;
@@ -17,9 +16,7 @@ namespace TestRail.Steps.UI
         public MilestoneListPage AddMilestoneWithModel(int projectId, MilestoneModel milestoneModel)
         {
             var milestoneListPage = new NavigationStep(driver).NavigateToMilestone(projectId);
-
             milestoneListPage.AddMilestoneButton().Click();
-
             var addMilestonePage = new AddMilestonePage(driver, projectId);
             addMilestonePage.NameField().SendKeys(milestoneModel.Name);
 
@@ -29,7 +26,7 @@ namespace TestRail.Steps.UI
             }
 
             addMilestonePage.AddMilestoneButton().Click();
-            logger.Info($"Added {milestoneModel.Name} milestone");
+            logger.Info($"Added '{milestoneModel.Name}' milestone");
             return milestoneListPage;
         }
 

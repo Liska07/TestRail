@@ -46,6 +46,10 @@ namespace TestRail.Tests.UI
         }
 
         [Test]
+        [Category("SmokeTests")]
+        [AllureDescription("Verifying an added milestone has been deleted")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [AllureStory("Delete a milestone")]
         public void DeleteAddedMilestone()
         {
             string expectedMessageText = "Successfully deleted the milestone (s).";

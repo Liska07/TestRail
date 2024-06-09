@@ -21,7 +21,7 @@ namespace TestRail.Tests.UI
         [AllureDescription("Verifying for adding a project with model data")]
         [AllureSeverity(SeverityLevel.critical)]
         [AllureStory("Add a project")]
-        public void SuccessfulProjectAddition()
+        public void AddProject()
         {
             string projectName = NameGenerator.CreateProjectName();
             ProjectModel projectInfo = new ProjectModel(projectName)
@@ -64,7 +64,7 @@ namespace TestRail.Tests.UI
         [AllureDescription("Verifying an added project has been deleted")]
         [AllureSeverity(SeverityLevel.critical)]
         [AllureStory("Delete a project")]
-        public void SuccessfulDeletionAddedProject()
+        public void DeleteAddedProject()
         {
             string projectName = NameGenerator.CreateProjectName();
             string expectedMessageText = "Successfully deleted the project.";

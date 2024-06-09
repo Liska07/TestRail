@@ -9,7 +9,7 @@ using TestRail.Utils;
 namespace TestRail.Tests.API
 {
     [Category("ProjectTests")]
-    [AllureFeature("Project")]
+    [AllureFeature("ProjectTests")]
     public class ApiProjectTests : BaseApiTest
     {
         [Test]
@@ -18,7 +18,7 @@ namespace TestRail.Tests.API
         [AllureSeverity(SeverityLevel.critical)]
         [AllureStory("Add a project")]
         [TestCaseSource(nameof(ProjectPositiveTestCases))]
-        public void SuccessfulProjectAdditionAPI(ProjectModel expectedProject)
+        public void AddProjectAPI(ProjectModel expectedProject)
         {
             var response = projectApiStep.AddProject(expectedProject);
             var actualProject = projectApiStep.GetProjectModelFromResponse(response);
@@ -47,7 +47,7 @@ namespace TestRail.Tests.API
         [AllureDescription("Verifying a response with invalid data")]
         [AllureSeverity(SeverityLevel.critical)]
         [TestCaseSource(nameof(ProjectNegativeTestCases))]
-        public void NegativeProjectAdditionAPI(Dictionary<string, object> project, string expectedResponseContent)
+        public void AddProjectNegativeAPI(Dictionary<string, object> project, string expectedResponseContent)
         {
             const string endPoint = "/index.php?/api/v2/add_project";
 
@@ -91,7 +91,7 @@ namespace TestRail.Tests.API
         [Category("SmokeTests")]
         [AllureDescription("Verifying an added project has been deleted")]
         [AllureSeverity(SeverityLevel.critical)]
-        public void SuccessfulDeletionAddedProjectAPI()
+        public void DeleteAddedProjectAPI()
         {
             ProjectModel createdProject = projectApiStep.AddProjectAndReturnIt(new ProjectModel($"EAntonova + {Guid.NewGuid()}"));
 
@@ -109,7 +109,7 @@ namespace TestRail.Tests.API
         [Category("SmokeTests")]
         [AllureDescription("Verifying an added project has been updeleted")]
         [AllureSeverity(SeverityLevel.critical)]
-        public void SuccessfulUpdateAddedProjectAPI()
+        public void UpdateAddedProjectAPI()
         {
             ProjectModel baseProjectInfo = new ProjectModel("EAntonova Base Project Name")
             {

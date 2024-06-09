@@ -57,7 +57,7 @@ namespace TestRail.Steps.API
             return project;
         }
 
-        public List<ProjectModel> GetProjectsListByProjectName(string projectName)
+        public List<ProjectModel> GetProjectsListByPartialProjectName(string projectName)
         {
             List<ProjectModel> projects = GetProjectList();
             List<ProjectModel> selectedProjects =
@@ -92,7 +92,9 @@ namespace TestRail.Steps.API
             string endPoint = $"index.php?/api/v2/delete_project/{project_id}";
 
             var response = apiService.CreatePostRequest(client, endPoint, "Content-Type", "application/json");
+
             logger.Info($"Deleted a project with id = {project_id}. StatusCode." + response.StatusCode);
+
             return response;
         }
 

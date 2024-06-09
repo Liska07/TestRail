@@ -41,7 +41,7 @@ namespace TestRail.Steps.UI
                 addProjectPage.IsEnableTestCaseCheckbox().Select();
             }
             addProjectPage.AddProjectButton().Click();
-            logger.Info($"Added {projectModel.Name} project");
+            logger.Info($"Added '{projectModel.Name}' project");
             return projectListPage;
         }
 
@@ -57,7 +57,7 @@ namespace TestRail.Steps.UI
             ClickDeleteButtonByProjectName(projectName);
             confirmationPage.IsDeleteProjectCheckbox().Select();
             confirmationPage.OkButton().Click();
-            logger.Info($"Deleted {projectName} project");
+            logger.Info($"Deleted '{projectName}' project");
             return projectListPage;
         }
 
