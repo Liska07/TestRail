@@ -1,3 +1,0 @@
-2024/06/08 16:17:30.950|ERROR|Screenshot cannot be attached! System.NullReferenceException: Object reference not set to an instance of an object.
-   at TestRail.BaseEntities.BaseTest.AttachScreenshotToAllure(ITakesScreenshot takesscreenshot, String name) in /home/runner/work/TestRail/TestRail/BaseEntities/BaseTest.cs:line 84
-   at TestRail.BaseEntities.BaseTest.__a$_around_TearDown_100663463_o() in /home/runner/work/TestRail/TestRail/BaseEntities/BaseTest.cs:line 67     
