@@ -1,0 +1,3 @@
+2024/06/09 12:55:45.741|INFO|Successful login     
+2024/06/09 12:55:46.758|INFO|Added 'EAntonova e8425e29-c668-4cbc-a1b7-f6854560c6a6' project     
+2024/06/09 12:55:47.442|INFO|Deleted 'EAntonova e8425e29-c668-4cbc-a1b7-f6854560c6a6' project     
