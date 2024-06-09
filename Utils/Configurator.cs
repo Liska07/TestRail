@@ -7,7 +7,7 @@ namespace TestRail.Utils
     public class Configurator
     {
         private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
-        private static AppSettings ReadConfiguration()
+        public static AppSettings ReadConfiguration()
         {
             string? directory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             if (directory == null)
@@ -78,5 +78,7 @@ namespace TestRail.Utils
             }
             return browserType.ToLower();
         }
+
+
     }
 }
