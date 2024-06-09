@@ -48,7 +48,7 @@ jobs:
     # Execute all tests in the solution
     - name: Execute All tests
       if: ${{ github.event.inputs.test_category == 'All' || github.event_name == 'schedule' }}
-      run: dotnet test --filter "Category!=ProjectCleaner"
+      run: dotnet test --filter "Category!=ProjectCleaner&Category!=DatabaseTests"
 
     # Execute smoke tests
     - name: Execute Smoke Tests

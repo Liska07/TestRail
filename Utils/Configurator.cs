@@ -78,5 +78,83 @@ namespace TestRail.Utils
             }
             return browserType.ToLower();
         }
+
+        private static DbSettings GetDbSettings()
+        {
+            DbSettings? dbSettings = ReadConfiguration().DbSettings;
+
+            if (dbSettings == null)
+            {
+                string errorMessage = "DbSettings in AppSettings is null.";
+                _logger.Error(errorMessage);
+                throw new InvalidOperationException(errorMessage);
+            }
+            return dbSettings;
+        }
+
+        public static string GetServer()
+        {
+            string? server = GetDbSettings().Server;
+
+            if (server == null)
+            {
+                string errorMessage = "Server (DbSettings) in AppSettings is null.";
+                _logger.Error(errorMessage);
+                throw new InvalidOperationException(errorMessage);
+            }
+            return server;
+        }
+
+        public static string GetPort()
+        {
+            string? port = GetDbSettings().Port;
+
+            if (port == null)
+            {
+                string errorMessage = "Port (DbSettings) in AppSettings is null.";
+                _logger.Error(errorMessage);
+                throw new InvalidOperationException(errorMessage);
+            }
+            return port;
+        }
+
+        public static string GetName()
+        {
+            string? name = GetDbSettings().Name;
+
+            if (name == null)
+            {
+                string errorMessage = "Name (DbSettings) in AppSettings is null.";
+                _logger.Error(errorMessage);
+                throw new InvalidOperationException(errorMessage);
+            }
+            return name;
+        }
+
+        public static string GetUserName()
+        {
+            string? userName = GetDbSettings().UserName;
+
+            if (userName == null)
+            {
+                string errorMessage = "UserName (DbSettings) in AppSettings is null.";
+                _logger.Error(errorMessage);
+                throw new InvalidOperationException(errorMessage);
+            }
+            return userName;
+        }
+
+        public static string GetPassword()
+        {
+            string? password = GetDbSettings().Password;
+
+            if (password == null)
+            {
+                string errorMessage = "Password (DbSettings) in AppSettings is null.";
+                _logger.Error(errorMessage);
+                throw new InvalidOperationException(errorMessage);
+            }
+            return password;
+        }
     }
 }

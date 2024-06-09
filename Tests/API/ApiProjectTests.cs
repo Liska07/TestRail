@@ -93,14 +93,14 @@ namespace TestRail.Tests.API
         [AllureSeverity(SeverityLevel.critical)]
         public void DeleteAddedProjectAPI()
         {
-            ProjectModel createdProject = projectApiStep.AddProjectAndReturnIt(new ProjectModel($"EAntonova + {Guid.NewGuid()}"));
+            ProjectModel addedProject = projectApiStep.AddProjectAndReturnIt(new ProjectModel(NameGenerator.CreateProjectName()));
 
-            var response = projectApiStep.DeleteProject(createdProject);
+            var response = projectApiStep.DeleteProject(addedProject);
 
             Assert.Multiple(() =>
             {
                 Assert.That(response.StatusCode == HttpStatusCode.OK);
-                Assert.That(!projectApiStep.IsProjectInList(createdProject.GetId()));
+                Assert.That(!projectApiStep.IsProjectInList(addedProject.GetId()));
             });
         }
 

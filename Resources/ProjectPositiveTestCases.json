@@ -7,14 +7,14 @@
     "case_statuses_enabled": true
   },
   {
-    "name": "EAntonova Project Empty Fields. Checkboxes = false",
+    "name": "EAntonova Empty Announcement, Checkboxes = false",
     "announcement": null,
     "show_announcement": false,
     "suite_mode": 2,
     "case_statuses_enabled": false
   },
   {
-    "name": "EAntonova Project Empty Fields. Checkboxes = null",
+    "name": "EAntonova Empty Announcement, Checkboxes = null",
     "suite_mode": 2
   },
   {
