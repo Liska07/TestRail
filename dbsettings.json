@@ -1,8 +1,0 @@
-{
-  "Db_Driver": "postgres",
-  "Db_Server": "localhost",
-  "Db_Port": "5432",
-  "Db_Name": "TesrRail",
-  "Db_UserName": "postgres",
-  "Db_Password": "postgres"
-}

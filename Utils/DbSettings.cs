@@ -2,11 +2,11 @@
 {
     public class DbSettings
     {
-        public string Db_Driver { get; set; }
-        public string Db_Server { get; set; }
-        public string Db_Port { get; set; }
-        public string Db_Name { get; set; }
-        public string Db_UserName { get; set; }
-        public string Db_Password { get; set;}
+        public string? Driver { get; set; }
+        public string? Server { get; set; }
+        public string? Port { get; set; }
+        public string? Name { get; set; }
+        public string? UserName { get; set; }
+        public string? Password { get; set;}
     }
 }

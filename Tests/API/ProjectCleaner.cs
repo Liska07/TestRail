@@ -8,7 +8,7 @@ namespace TestRail.Tests.API
     [Category("ProjectCleaner")]
     public class ProjectCleaner : BaseApiTest
     {
-        //[Test]
+        [Test]
         [NonParallelizable] //Runs after all tests
         [AllureDescription("Used to delete all my projects")]
         public void DeleteAllMyProjects()

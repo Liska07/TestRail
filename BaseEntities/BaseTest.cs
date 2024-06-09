@@ -24,7 +24,7 @@ namespace TestRail.BaseEntities
         protected ConfirmationProjectPage confirmationPage;
 
         [SetUp]
-        [AllureBefore("Set up driver")]
+        [AllureBefore("Setup driver")]
         public void SetupBaseTest()
         {
             driver = new Browser().Driver;

@@ -10,11 +10,11 @@ namespace TestRail.Connector
         public NpgsqlConnection Connection { get; init; }
         public DbConnector()
         {
-            var connectionString = $"Host={Configurator.ReadConfiguration().DbSettings.Db_Server};" +
-                                   $"Port={Configurator.ReadConfiguration().DbSettings.Db_Port};" +
-                                   $"Database={Configurator.ReadConfiguration().DbSettings.Db_Name};" +
-                                   $"User Id={Configurator.ReadConfiguration().DbSettings.Db_UserName};" +
-                                   $"Password={Configurator.ReadConfiguration().DbSettings.Db_Password};";
+            var connectionString = $"Host={Configurator.GetServer()};" +
+                                   $"Port={Configurator.GetPort()};" +
+                                   $"Database={Configurator.GetName()};" +
+                                   $"User Id={Configurator.GetUserName()};" +
+                                   $"Password={Configurator.GetPassword()};";
 
             try
             {

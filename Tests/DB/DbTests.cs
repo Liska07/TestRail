@@ -1,18 +1,22 @@
-﻿using System.Net;
+﻿using Allure.Net.Commons;
+using Allure.NUnit.Attributes;
+using System.Net;
 using TestRail.BaseEntities;
 using TestRail.Connector;
 using TestRail.Models;
 using TestRail.Services.DB;
-using TestRail.Steps.UI;
 
 namespace TestRail.Tests.DB
 {
+    [Category("DatabaseTests")]
+    [AllureFeature("ProjectTests")]
     public class DbTests : BaseApiTest
     {
         private DbConnector _connector;
         private DbService _projectService;
 
         [SetUp]
+        [AllureBefore("Setup connection")]
         public void ConnectToDatabase()
         {
             _connector = new DbConnector();
@@ -20,6 +24,9 @@ namespace TestRail.Tests.DB
         }
 
         [Test]
+        [AllureDescription("Verifying for adding a project by API with data from database")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [AllureStory("Add a project")]
         public void AddProjectDB()
         {
             List<ProjectModel> projectsFromDB = _projectService.GetAllProjects();
@@ -39,6 +46,7 @@ namespace TestRail.Tests.DB
         }
 
         [TearDown]
+        [AllureAfter("Close connection")]
         public void DisconnectFromDatabase()
         {
             if (_connector != null)

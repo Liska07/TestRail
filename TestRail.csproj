@@ -12,16 +12,12 @@
   <ItemGroup>
     <None Remove="allureConfig.json.json" />
     <None Remove="appsettings.json" />
-    <None Remove="dbsettings.json" />
     <None Remove="NLog.config" />
     <None Remove="Resources\ProjectPositiveTestCases.json" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="allureConfig.json.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="dbsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="appsettings.json">

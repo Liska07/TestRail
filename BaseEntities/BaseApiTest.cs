@@ -30,7 +30,7 @@ namespace TestRail.BaseEntities
         }
 
         [SetUp]
-        [AllureBefore("Set up API client")]
+        [AllureBefore("Setup API client")]
         public void Setup()
         {
             apiService = new ApiService();
