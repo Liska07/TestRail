@@ -14,6 +14,7 @@ on:
        - Project
        - Milestone
        - Cleaner
+       - ToFail
  
   schedule:
     - cron: '55 13 * * *'
@@ -48,7 +49,7 @@ jobs:
     # Execute all tests in the solution
     - name: Execute All tests
       if: ${{ github.event.inputs.test_category == 'All' || github.event_name == 'schedule' }}
-      run: dotnet test --filter "Category!=ProjectCleaner&Category!=DatabaseTests"
+      run: dotnet test --filter "Category!=ProjectCleaner & Category!=DatabaseTests & Category!=ToFail"
 
     # Execute smoke tests
     - name: Execute Smoke Tests
@@ -74,6 +75,11 @@ jobs:
     - name: Execute Cleaner Tests
       if: github.event.inputs.test_category == 'Cleaner'
       run: dotnet test --filter Category=ProjectCleaner
+
+    # Execute tests to fail
+    - name: Execute Cleaner Tests
+      if: github.event.inputs.test_category == 'ToFail'
+      run: dotnet test --filter Category=ToFail
 
     - name: Load test report history
       uses: actions/checkout@v3

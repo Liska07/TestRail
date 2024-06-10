@@ -5,7 +5,7 @@ namespace TestRail.Models
 {
     public class ProjectModel
     {
-        private Logger _logger = LogManager.GetCurrentClassLogger();
+        private readonly Logger _logger = LogManager.GetCurrentClassLogger();
         [JsonPropertyName("id")] public int? Id { get; set; }
         [JsonPropertyName("name")] public string Name { get; }
         [JsonPropertyName("announcement")] public string? Announcement { get; set; }

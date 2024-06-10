@@ -5,7 +5,7 @@ namespace TestRail.Models
 {
     public class MilestoneModel
     {
-        private Logger _logger = LogManager.GetCurrentClassLogger();
+        private readonly Logger _logger = LogManager.GetCurrentClassLogger();
         [JsonPropertyName("id")] public int? Id { get; set; }
         [JsonPropertyName("name")] public string Name { get; }
         [JsonPropertyName("description")] public string? Description { get; set; }

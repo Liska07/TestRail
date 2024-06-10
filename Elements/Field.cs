@@ -5,7 +5,6 @@ namespace TestRail.Elements
     public class Field
     {
         private readonly UiElement _uiElement;
-
         public Field(IWebDriver driver, By locator)
         {
             _uiElement = new UiElement(driver, locator);
