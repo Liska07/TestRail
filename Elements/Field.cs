@@ -14,7 +14,7 @@ namespace TestRail.Elements
         public void Click() => _uiElement.Click();
         public bool Displayed => _uiElement.Displayed;
         public bool Enabled => _uiElement.Enabled;
-        public string Text => _uiElement.Text.Trim();
+        public string Text => _uiElement.Text;
         public string GetAttribute(string attributeName) => _uiElement.GetAttribute(attributeName);
     }
 }

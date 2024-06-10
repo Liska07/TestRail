@@ -31,10 +31,32 @@ namespace TestRail.Services.DB
                     ProjectTypeByValue = reader.GetInt32(reader.GetOrdinal("project_type")),
                     IsEnableTestCase = reader.IsDBNull(reader.GetOrdinal("announcement")) ? false : reader.GetBoolean(reader.GetOrdinal("is_enable_test_case"))
                 };
-                _logger.Info(project);
+
                 projectList.Add(project);
+                _logger.Info($"Project from DB: {project}");
             }
             return projectList;
+        }
+
+        public List<MilestoneModel> GetAllMilestones()
+        {
+            var milestoneList = new List<MilestoneModel>();
+
+            var cmd = new NpgsqlCommand("SELECT * FROM public.\"Milestones\";", _connection);
+            var reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                var milestone = new MilestoneModel(reader.GetString(reader.GetOrdinal("name")))
+                {
+                    Id = reader.GetInt32(reader.GetOrdinal("id")),
+                    Description = reader.IsDBNull(reader.GetOrdinal("description")) ? null : reader.GetString(reader.GetOrdinal("description"))
+                };
+                
+                milestoneList.Add(milestone);
+                _logger.Info($"Milestone from DB: {milestone}");
+            }
+            return milestoneList;
         }
     }
 }

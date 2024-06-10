@@ -40,7 +40,7 @@ namespace TestRail.Tests.UI
         [AllureSeverity(SeverityLevel.normal)]
         public void LoginWithShortPassword()
         {
-            string userName = "WrongUserName";
+            string userName = "UserName";
             string password = "1234";
             string expectedPasswordErrorText = "Password is too short (5 characters required).";
 

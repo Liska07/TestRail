@@ -41,7 +41,7 @@ namespace TestRail.Tests.UI
             Assert.Multiple(() =>
             {
                 Assert.That(milestoneListPage.GetMessageText(), Is.EqualTo(expectedMessageText));
-                Assert.That(milestoneApiStep.IsMilestoneInListByName(_projectId, milestoneName));
+                Assert.That(milestoneApiStep.IsMilestoneInList(_projectId, milestoneName));
             });
         }
 
@@ -63,7 +63,7 @@ namespace TestRail.Tests.UI
             Assert.Multiple(() =>
             {
                 Assert.That(milestoneListPage.GetMessageText(), Is.EqualTo(expectedMessageText));
-                Assert.That(!milestoneApiStep.IsMilestoneInListByName(_projectId, milestoneName));
+                Assert.That(!milestoneApiStep.IsMilestoneInList(_projectId, milestoneName));
             });
         }
     }

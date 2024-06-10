@@ -24,5 +24,27 @@ namespace TestRail.Models
                 Name = name;
             }
         }
+
+        public override string ToString()
+        {
+            return $"{nameof(Id)}: {Id}, {nameof(Name)}: {Name}, {nameof(Description)}: {Description}";
+        }
+
+        public bool IsEqual(MilestoneModel milestoneModel)
+        {
+            return Name == milestoneModel.Name &&
+                   Description == milestoneModel.Description;
+        }
+
+        public int GetId()
+        {
+            if (Id == null)
+            {
+                string errorMessage = "Milestone Id is null.";
+                _logger.Error(errorMessage);
+                throw new InvalidOperationException(errorMessage);
+            }
+            return Id.Value;
+        }
     }
 }

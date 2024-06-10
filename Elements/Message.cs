@@ -10,7 +10,7 @@ namespace TestRail.Elements
             _uiElement = new UiElement(driver, locator);
         }
         public bool Displayed => _uiElement.Displayed;
-        public string Text => _uiElement.Text.Trim();
+        public string Text => _uiElement.Text;
         public string GetAttribute(string attributeName) => _uiElement.GetAttribute(attributeName);
     }
 }

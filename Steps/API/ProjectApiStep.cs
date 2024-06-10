@@ -61,6 +61,7 @@ namespace TestRail.Steps.API
                 logger.Error(errorMessage);
                 throw new InvalidOperationException(errorMessage);
             }
+
             return project;
         }
 
@@ -71,6 +72,7 @@ namespace TestRail.Steps.API
                         projects
                         .Where(project => project.Name.Contains(projectName))
                         .ToList();
+
             return selectedProjects;
         }
 
@@ -81,6 +83,7 @@ namespace TestRail.Steps.API
 
             var response = apiService.CreatePostRequest(client, endPoint, JsonSerializer.Serialize(projectToCreate));
             logger.Info($"Added a project: {response.Content}. StatusCode." + response.StatusCode);
+
             return response;
         }
 
@@ -89,6 +92,7 @@ namespace TestRail.Steps.API
         {
             var response = AddProject(projectToCreate);
             ProjectModel createdProject = GetProjectModelFromResponse(response);
+
             return createdProject;
         }
 

@@ -23,16 +23,16 @@ namespace TestRail.Elements
                 {
                     if (GetAttribute("value") == null)
                     {
-                        return GetAttribute("innertext");
+                        return GetAttribute("innertext").Trim();
                     }
                     else
                     {
-                        return GetAttribute("value");
+                        return GetAttribute("value").Trim();
                     }
                 }
                 else
                 {
-                    return _element.Text;
+                    return _element.Text.Trim();
                 }
             }
         }
@@ -47,17 +47,17 @@ namespace TestRail.Elements
 
         public bool Displayed => _element.Displayed;
 
-        private UiElement(IWebDriver driver)
+        public UiElement(IWebDriver driver, By locator)
         {
             _driver = driver;
             _actions = new Actions(_driver);
-        }
-        public UiElement(IWebDriver driver, By locator) : this(driver)
-        {
             _element = _driver.FindElement(locator);
         }
-        public UiElement(IWebDriver driver, IWebElement element) : this(driver)
+
+        public UiElement(IWebDriver driver, IWebElement element)
         {
+            _driver = driver;
+            _actions = new Actions(_driver);
             _element = element;
         }
 
