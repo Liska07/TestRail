@@ -1,0 +1,27 @@
+2024/06/10 13:56:17.124|INFO|Successful login     
+2024/06/10 13:56:17.669|INFO|Added a project: {"id":841,"name":"EAntonova de8f3361-ef0a-4104-8c4b-bbc58798e01e","announcement":null,"show_announcement":false,"is_completed":false,"completed_on":null,"suite_mode":3,"default_role_id":null,"case_statuses_enabled":false,"url":"https:\/\/liska01.testrail.io\/index.php?\/projects\/overview\/841","users":[],"groups":[]}. StatusCode.OK     
+2024/06/10 13:56:23.009|ERROR|'Add Milestone Button' on the 'Milestone List Page' is not  displayed! OpenQA.Selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#navigation\-milestones\-add"}
+  (Session info: chrome-headless-shell=125.0.6422.141); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at TestRail.Elements.UiElement..ctor(IWebDriver driver, By locator) in /home/runner/work/TestRail/TestRail/Elements/UiElement.cs:line 57
+   at TestRail.Elements.Button..ctor(IWebDriver driver, By locator) in /home/runner/work/TestRail/TestRail/Elements/Button.cs:line 12
+   at TestRail.Pages.MilestonePages.MilestoneListPage.AddMilestoneButton() in /home/runner/work/TestRail/TestRail/Pages/MilestonePages/MilestoneListPage.cs:line 17
+   at TestRail.Pages.MilestonePages.MilestoneListPage.EvaluateLoadedStatus() in /home/runner/work/TestRail/TestRail/Pages/MilestonePages/MilestoneListPage.cs:line 32     
+2024/06/10 13:56:28.261|ERROR|'Add Milestone Button' on the 'Milestone List Page' is not  displayed! OpenQA.Selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#navigation\-milestones\-add"}
+  (Session info: chrome-headless-shell=125.0.6422.141); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at TestRail.Elements.UiElement..ctor(IWebDriver driver, By locator) in /home/runner/work/TestRail/TestRail/Elements/UiElement.cs:line 57
+   at TestRail.Elements.Button..ctor(IWebDriver driver, By locator) in /home/runner/work/TestRail/TestRail/Elements/Button.cs:line 12
+   at TestRail.Pages.MilestonePages.MilestoneListPage.AddMilestoneButton() in /home/runner/work/TestRail/TestRail/Pages/MilestonePages/MilestoneListPage.cs:line 17
+   at TestRail.Pages.MilestonePages.MilestoneListPage.EvaluateLoadedStatus() in /home/runner/work/TestRail/TestRail/Pages/MilestonePages/MilestoneListPage.cs:line 32     
+2024/06/10 13:56:28.292|INFO|Attached a screenshot to Allure     
