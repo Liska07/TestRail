@@ -1,3 +1,0 @@
-2024/06/09 00:45:49.219|INFO|Successful login     
-2024/06/09 00:45:50.774|INFO|Added EAntonova 73a64724-4812-440f-a27b-36be7902b0d3 project     
-2024/06/09 00:45:52.098|INFO|Deleted EAntonova 73a64724-4812-440f-a27b-36be7902b0d3 project     
