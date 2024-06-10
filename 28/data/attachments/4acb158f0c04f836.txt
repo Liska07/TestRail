@@ -1,7 +1,0 @@
-2024/06/09 00:41:33.097|INFO|Successful login     
-2024/06/09 00:41:33.651|INFO|Added a project: {"id":244,"name":"EAntonova 01629f72-2323-438b-9e79-74f3ab442b6e","announcement":null,"show_announcement":false,"is_completed":false,"completed_on":null,"suite_mode":3,"default_role_id":null,"case_statuses_enabled":false,"url":"https:\/\/liska01.testrail.io\/index.php?\/projects\/overview\/244","users":[],"groups":[]}. StatusCode.OK     
-milestoneModel.Name: Release 7e2f7d97-d0c4-4cde-b767-ed46275e07bb
-addMilestonePage.NameField().GetAttribute: Release 7e2f7d97-d0c4-4cde-b767-ed46275e07bb
-milestoneModel.Description: Test Milestone Description
-addMilestonePage.Description().GetAttribute: 
-2024/06/09 00:41:35.804|INFO|Added Release 7e2f7d97-d0c4-4cde-b767-ed46275e07bb milestone     
