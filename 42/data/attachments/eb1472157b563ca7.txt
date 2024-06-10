@@ -1,3 +1,0 @@
-2024/06/10 01:51:15.543|INFO|Successful login     
-2024/06/10 01:51:19.277|INFO|Added 'EAntonova 7bc3732b-24fa-49ad-9321-a47eb3473a98' project     
-2024/06/10 01:51:21.687|INFO|Deleted 'EAntonova 7bc3732b-24fa-49ad-9321-a47eb3473a98' project     

@@ -1,0 +1,10 @@
+2024/06/10 21:10:14.703|INFO|Deleted a project with id = 1003. StatusCode.OK     
+2024/06/10 21:10:15.053|INFO|Deleted a project with id = 1004. StatusCode.OK     
+2024/06/10 21:10:15.435|INFO|Deleted a project with id = 1005. StatusCode.OK     
+2024/06/10 21:10:15.673|INFO|Deleted a project with id = 1006. StatusCode.OK     
+2024/06/10 21:10:15.913|INFO|Deleted a project with id = 1007. StatusCode.OK     
+2024/06/10 21:10:16.172|INFO|Deleted a project with id = 1008. StatusCode.OK     
+2024/06/10 21:10:16.393|INFO|Deleted a project with id = 1010. StatusCode.OK     
+2024/06/10 21:10:16.626|INFO|Deleted a project with id = 1011. StatusCode.OK     
+2024/06/10 21:10:16.961|INFO|Deleted a project with id = 1012. StatusCode.OK     
+2024/06/10 21:10:17.426|INFO|Deleted a project with id = 1013. StatusCode.OK     
