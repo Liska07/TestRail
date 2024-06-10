@@ -1,3 +1,0 @@
-2024/06/09 13:56:25.947|INFO|Successful login     
-2024/06/09 13:56:27.283|INFO|Added 'EAntonova 04d31025-7fc7-4664-86c6-30567079b537' project     
-2024/06/09 13:56:28.398|INFO|Deleted 'EAntonova 04d31025-7fc7-4664-86c6-30567079b537' project     
