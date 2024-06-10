@@ -1,4 +1,0 @@
-2024/06/08 21:31:36.055|INFO|Successful login     
-2024/06/08 21:31:37.076|INFO|Added a project: {"id":215,"name":"EAntonova ac2a0f87-a687-47c9-a8ed-1bc9ba468562","announcement":null,"show_announcement":false,"is_completed":false,"completed_on":null,"suite_mode":3,"default_role_id":null,"case_statuses_enabled":false,"url":"https:\/\/liska01.testrail.io\/index.php?\/projects\/overview\/215","users":[],"groups":[]}. StatusCode.OK     
-2024/06/08 21:31:38.556|INFO|Added Release 7810caf8-5b03-4387-86a2-a2791768f3c5 milestone     
-2024/06/08 21:31:43.878|INFO|Attached a screenshot to Allure     
