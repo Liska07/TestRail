@@ -28,6 +28,13 @@ namespace TestRail.Steps.API
                 throw new InvalidOperationException(errorMessage);
             }
 
+            if (projectsResponse.Projects == null)
+            {
+                string errorMessage = "Projects in projectsResponse is null.";
+                logger.Error(errorMessage);
+                throw new InvalidOperationException(errorMessage);
+            }
+
             return projectsResponse.Projects.ToList();
         }
 

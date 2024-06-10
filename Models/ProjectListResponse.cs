@@ -4,6 +4,6 @@ namespace TestRail.Models
 {
     public class ProjectListResponse
     {
-        [JsonPropertyName("projects")] public List<ProjectModel> Projects { get; set; }
+        [JsonPropertyName("projects")] public List<ProjectModel>? Projects { get; set; }
     }
 }

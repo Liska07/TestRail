@@ -28,7 +28,7 @@ namespace TestRail.Services.DB
                     Id = reader.GetInt32(reader.GetOrdinal("id")),
                     Announcement = reader.IsDBNull(reader.GetOrdinal("announcement")) ? null : reader.GetString(reader.GetOrdinal("announcement")),
                     IsShowAnnouncement = reader.IsDBNull(reader.GetOrdinal("announcement")) ? false : reader.GetBoolean(reader.GetOrdinal("is_show_announcement")),
-                    ProjectTypeByValue = reader.GetInt32(reader.GetOrdinal("suite_mode")),
+                    ProjectTypeByValue = reader.GetInt32(reader.GetOrdinal("project_type")),
                     IsEnableTestCase = reader.IsDBNull(reader.GetOrdinal("announcement")) ? false : reader.GetBoolean(reader.GetOrdinal("is_enable_test_case"))
                 };
                 _logger.Info(project);

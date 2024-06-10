@@ -28,6 +28,13 @@ namespace TestRail.Steps.API
                 throw new InvalidOperationException(errorMessage);
             }
 
+            if (milestonesResponse.Milestones == null)
+            {
+                string errorMessage = "Milestones in milestonesResponse is null.";
+                logger.Error(errorMessage);
+                throw new InvalidOperationException(errorMessage);
+            }
+
             return milestonesResponse.Milestones.ToList();
         }
 
