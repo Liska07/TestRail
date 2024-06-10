@@ -17,7 +17,6 @@ namespace TestRail.Steps.UI
         {
             var milestoneListPage = new NavigationStep(driver).NavigateToMilestone(projectId);
             milestoneListPage.AddMilestoneButton().Click();
-            //var addMilestonePage = new AddMilestonePage(driver, projectId, true);
             var addMilestonePage = new AddMilestonePage(driver, projectId);
             addMilestonePage.NameField().SendKeys(milestoneModel.Name);
 

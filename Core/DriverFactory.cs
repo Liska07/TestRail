@@ -37,8 +37,6 @@ namespace TestRail.Core
             var edgeOptions = new EdgeOptions();
             edgeOptions.AddArgument("--inprivate");
             edgeOptions.AddArgument("--headless");
-            //edgeOptions.AddArgument("--disable-gpu");
-            //edgeOptions.AddArgument("--disable-extensions");
 
             new DriverManager().SetUpDriver(new EdgeConfig(), VersionResolveStrategy.MatchingBrowser);
             return new EdgeDriver(edgeOptions);

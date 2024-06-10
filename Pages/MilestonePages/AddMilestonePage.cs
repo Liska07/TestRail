@@ -14,9 +14,7 @@ namespace TestRail.Pages.MilestonePages
         public AddMilestonePage(IWebDriver driver, int projectId) : base(driver, projectId)
         {
         }
-        //public AddMilestonePage(IWebDriver driver, int projectId, bool openPageByUrl = false) : base(driver, projectId, openPageByUrl)
-        //{
-        //}
+       
         public Field NameField() => new Field(driver, _nameFieldBy);
         public Field DescriptionField() => new Field(driver, _descriptionFieldBy);
         public Button AttachButton() => new Button(driver, _attachButtonBy);
