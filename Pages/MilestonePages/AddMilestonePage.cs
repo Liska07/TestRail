@@ -14,7 +14,9 @@ namespace TestRail.Pages.MilestonePages
         public AddMilestonePage(IWebDriver driver, int projectId) : base(driver, projectId)
         {
         }
-
+        //public AddMilestonePage(IWebDriver driver, int projectId, bool openPageByUrl = false) : base(driver, projectId, openPageByUrl)
+        //{
+        //}
         public Field NameField() => new Field(driver, _nameFieldBy);
         public Field DescriptionField() => new Field(driver, _descriptionFieldBy);
         public Button AttachButton() => new Button(driver, _attachButtonBy);
@@ -29,11 +31,11 @@ namespace TestRail.Pages.MilestonePages
         {
             try
             {
-                return AddMilestoneButton().Displayed;
+                return NameField().Enabled;
             }
             catch (Exception ex)
             {
-                logger.Error("'Add Milestone Button' on the 'Project List Page' is not  displayed! " + ex);
+                logger.Error("'Name Field' on the 'Add Milestone Page' is not enabled! " + ex);
                 return false;
             }
         }

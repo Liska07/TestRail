@@ -27,7 +27,7 @@ namespace TestRail.Pages.MilestonePages
             }
             catch (Exception ex)
             {
-                logger.Error("'OK Button' on the 'Conformation Page' is not  displayed! " + ex);
+                logger.Error("'OK Button' on the 'Conformation Milestone Page' is not  displayed! " + ex);
                 return false;
             }
         }

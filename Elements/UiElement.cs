@@ -105,7 +105,7 @@ namespace TestRail.Elements
 
         public void SendKeys(string text)
         {
-            _element.Click();
+            //_element.Click();
             _element.SendKeys(text);
             try
             {

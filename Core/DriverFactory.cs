@@ -26,10 +26,10 @@ namespace TestRail.Core
         {
             var firefoxOptions = new FirefoxOptions();
             firefoxOptions.AddArgument("--private");
-            //firefoxOptions.AddArgument("--headless");
-            firefoxOptions.Profile = new FirefoxProfileManager().GetProfile("default");
-            firefoxOptions.Profile.SetPreference("extensions.enabledScopes", 0);
-            firefoxOptions.Profile.SetPreference("layers.acceleration.disabled", true);
+            firefoxOptions.AddArgument("--headless");
+            //firefoxOptions.Profile = new FirefoxProfileManager().GetProfile("default");
+            //firefoxOptions.Profile.SetPreference("extensions.enabledScopes", 0);
+            //firefoxOptions.Profile.SetPreference("layers.acceleration.disabled", true);
 
             new DriverManager().SetUpDriver(new FirefoxConfig());
             return new FirefoxDriver(firefoxOptions);

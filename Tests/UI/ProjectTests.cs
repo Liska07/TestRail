@@ -127,25 +127,5 @@ namespace TestRail.Tests.UI
                 Assert.That(projectApiStep.IsProjectInList(projectName));
             });
         }
-
-        [Test]
-        public void CheckTextField()
-        {
-            string projectName = NameGenerator.CreateProjectName();
-            ProjectModel projectInfo = new ProjectModel(projectName)
-            {
-                Announcement = "Test Project Announcement",
-                IsShowAnnouncement = true,
-                ProjectTypeByValue = 1,
-                IsEnableTestCase = true,
-            };
-
-            projectStep.AddProjectWithModel(projectInfo);
-            navigationStep.NavigateToProjectList();
-            ProjectModel addedProject = projectApiStep.GetProjectByItsName(projectName);
-            driver.Navigate().GoToUrl($"https://liska01.testrail.io/index.php?/admin/projects/edit/{addedProject.Id}");
-            string nameField = addProjectPage.NameField().Text;
-            Console.WriteLine( nameField );
-        }
     }
 }

@@ -33,7 +33,7 @@ namespace TestRail.Pages.MilestonePages
             }
             catch (Exception ex)
             {
-                logger.Error("'Add Milestone Button' on the 'Project List Page' is not  displayed! " + ex);
+                logger.Error("'Add Milestone Button' on the 'Milestone List Page' is not  displayed! " + ex);
                 return false;
             }
         }
