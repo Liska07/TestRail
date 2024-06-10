@@ -1,3 +1,0 @@
-2024/06/08 17:19:55.363|INFO|Successful login     
-2024/06/08 17:19:56.578|INFO|Added EAntonova 52e3c44a-ede1-43d0-a4cb-175c69009c43 project     
-2024/06/08 17:19:57.463|INFO|Deleted EAntonova 52e3c44a-ede1-43d0-a4cb-175c69009c43 project     
