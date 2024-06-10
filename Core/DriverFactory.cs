@@ -27,9 +27,6 @@ namespace TestRail.Core
             var firefoxOptions = new FirefoxOptions();
             firefoxOptions.AddArgument("--private");
             firefoxOptions.AddArgument("--headless");
-            //firefoxOptions.Profile = new FirefoxProfileManager().GetProfile("default");
-            //firefoxOptions.Profile.SetPreference("extensions.enabledScopes", 0);
-            //firefoxOptions.Profile.SetPreference("layers.acceleration.disabled", true);
 
             new DriverManager().SetUpDriver(new FirefoxConfig());
             return new FirefoxDriver(firefoxOptions);
@@ -39,9 +36,9 @@ namespace TestRail.Core
         {
             var edgeOptions = new EdgeOptions();
             edgeOptions.AddArgument("--inprivate");
-            //edgeOptions.AddArgument("--headless");
-            edgeOptions.AddArgument("--disable-gpu");
-            edgeOptions.AddArgument("--disable-extensions");
+            edgeOptions.AddArgument("--headless");
+            //edgeOptions.AddArgument("--disable-gpu");
+            //edgeOptions.AddArgument("--disable-extensions");
 
             new DriverManager().SetUpDriver(new EdgeConfig(), VersionResolveStrategy.MatchingBrowser);
             return new EdgeDriver(edgeOptions);
