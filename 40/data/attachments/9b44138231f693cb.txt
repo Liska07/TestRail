@@ -1,3 +1,0 @@
-2024/06/10 00:52:47.396|INFO|Successful login     
-2024/06/10 00:52:48.891|INFO|Added 'EAntonova 75de6ed9-5c2d-4ed0-bc33-fff7de6dc485' project     
-EAntonova 75de6ed9-5c2d-4ed0-bc33-fff7de6dc485
