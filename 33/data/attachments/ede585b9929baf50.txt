@@ -1,3 +1,0 @@
-2024/06/09 01:56:37.356|INFO|Successful login     
-2024/06/09 01:56:38.790|INFO|Added 'EAntonova b92a8bd1-5e0d-4208-97de-5896fac08546' project     
-2024/06/09 01:56:39.575|INFO|Deleted 'EAntonova b92a8bd1-5e0d-4208-97de-5896fac08546' project     

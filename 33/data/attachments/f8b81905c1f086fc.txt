@@ -1,2 +1,0 @@
-2024/06/09 01:56:37.535|INFO|Successful login     
-2024/06/09 01:56:39.302|INFO|Added 'EAntonova 710ef8a8-723e-409e-a316-a614b7a026af' project     

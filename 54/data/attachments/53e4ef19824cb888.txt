@@ -1,0 +1,3 @@
+2024/06/10 15:21:39.100|INFO|Successful login     
+2024/06/10 15:21:40.686|INFO|Added 'EAntonova df042af6-bad1-46e5-b393-77742e52db1d' project     
+2024/06/10 15:21:41.768|INFO|Deleted 'EAntonova df042af6-bad1-46e5-b393-77742e52db1d' project     
