@@ -1,3 +1,0 @@
-2024/06/10 15:09:37.224|INFO|Successful login     
-2024/06/10 15:09:38.421|INFO|Added 'EAntonova bdf37518-5f41-4291-9390-beda3b8b9b5d' project     
-2024/06/10 15:09:39.370|INFO|Deleted 'EAntonova bdf37518-5f41-4291-9390-beda3b8b9b5d' project     
