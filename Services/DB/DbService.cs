@@ -31,13 +31,13 @@ namespace TestRail.Services.DB
                         ? null 
                         : reader.GetString(reader.GetOrdinal("announcement")),
 
-                    IsShowAnnouncement = reader.IsDBNull(reader.GetOrdinal("announcement")) 
+                    IsShowAnnouncement = reader.IsDBNull(reader.GetOrdinal("is_show_announcement")) 
                         ? false 
                         : reader.GetBoolean(reader.GetOrdinal("is_show_announcement")),
 
                     ProjectTypeByValue = reader.GetInt32(reader.GetOrdinal("project_type")),
 
-                    IsEnableTestCase = reader.IsDBNull(reader.GetOrdinal("announcement")) 
+                    IsEnableTestCase = reader.IsDBNull(reader.GetOrdinal("is_enable_test_case")) 
                         ? false 
                         : reader.GetBoolean(reader.GetOrdinal("is_enable_test_case"))
                 };

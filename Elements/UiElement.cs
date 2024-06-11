@@ -19,7 +19,7 @@ namespace TestRail.Elements
         {
             get
             {
-                if (_element.Text == null || _element.Text == "")
+                if (string.IsNullOrEmpty(_element.Text))
                 {
                     if (GetAttribute("value") == null)
                     {

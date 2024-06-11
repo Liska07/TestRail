@@ -73,8 +73,8 @@ namespace TestRail.Tests.UI
 
         private static readonly string[][] TestCasesForLoginWithWrongData =
         [
-            [EnvironmentHelper.GetEnvironmentVariableOrThrow("TESTRAIL_USERNAME"), "12345"],
-            ["WrongUserName", EnvironmentHelper.GetEnvironmentVariableOrThrow("TESTRAIL_PASSWORD")],
+            ["UserName", "12345"],
+            ["UserName", "Pappword"],
             ["' OR '1'='1", "' OR '1'='1"],
             ["<script>alert(1)</script>", "<script>alert(1)</script>"]
         ];

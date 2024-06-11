@@ -18,15 +18,15 @@ namespace TestRail.Tests.API
         [AllureSeverity(SeverityLevel.critical)]
         [AllureStory("Add a project")]
         [TestCaseSource(nameof(ProjectPositiveTestCases))]
-        public void AddProjectAPI(ProjectModel expectedProject)
+        public void AddProjectAPI(ProjectModel projectInfo)
         {
-            var response = projectApiStep.AddProject(expectedProject);
+            var response = projectApiStep.AddProject(projectInfo);
             var actualProject = projectApiStep.GetProjectModelFromResponse(response);
 
             Assert.Multiple(() =>
             {
                 Assert.That(response.StatusCode == HttpStatusCode.OK);
-                Assert.That(actualProject.IsEqual(expectedProject));
+                Assert.That(actualProject.IsEqual(projectInfo));
                 Assert.That(projectApiStep.IsProjectInList(actualProject.GetId()));
             });
         }
@@ -36,8 +36,8 @@ namespace TestRail.Tests.API
             using (StreamReader r = new StreamReader("Resources/ProjectPositiveTestCases.json"))
             {
                 string json = r.ReadToEnd();
-                var items = JsonSerializer.Deserialize<List<ProjectModel>>(json);
-                return items ?? new List<ProjectModel>();
+                var projects = JsonSerializer.Deserialize<List<ProjectModel>>(json);
+                return projects ?? new List<ProjectModel>();
             }
         }
 
