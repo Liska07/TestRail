@@ -1,0 +1,2 @@
+2024/06/11 18:39:47.391|INFO|Added a project: {"id":1249,"name":"EAntonova 5ff6baf8-023d-4f58-b959-8f2e5480ae3f","announcement":null,"show_announcement":false,"is_completed":false,"completed_on":null,"suite_mode":3,"default_role_id":null,"case_statuses_enabled":false,"url":"https:\/\/liska01.testrail.io\/index.php?\/projects\/overview\/1249","users":[],"groups":[]}. StatusCode.OK     
+2024/06/11 18:39:47.619|INFO|Deleted a project with id = 1249. StatusCode.OK     
