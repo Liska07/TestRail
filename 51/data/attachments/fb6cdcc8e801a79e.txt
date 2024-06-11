@@ -1,3 +1,0 @@
-2024/06/10 15:13:01.341|INFO|Successful login     
-2024/06/10 15:13:02.812|INFO|Added 'EAntonova 4a87782d-fecc-412a-a99a-2fab15c92959' project     
-2024/06/10 15:13:03.713|INFO|Deleted 'EAntonova 4a87782d-fecc-412a-a99a-2fab15c92959' project     
