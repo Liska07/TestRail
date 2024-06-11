@@ -1,3 +1,0 @@
-2024/06/10 15:05:00.778|INFO|Successful login     
-2024/06/10 15:05:02.439|INFO|Added 'EAntonova f4374233-9c7c-447f-a226-d55593db49c3' project     
-2024/06/10 15:05:04.019|INFO|Deleted 'EAntonova f4374233-9c7c-447f-a226-d55593db49c3' project     
