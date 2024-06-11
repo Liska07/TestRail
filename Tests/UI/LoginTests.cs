@@ -56,7 +56,9 @@ namespace TestRail.Tests.UI
         [Category("SmokeTests")]
         [AllureDescription("Check the error messages if username or password are incorrect")]
         [AllureSeverity(SeverityLevel.critical)]
-        [TestCaseSource(nameof(TestCasesForLoginWithWrongData))]
+        [TestCase("UserName", "Password")]
+        [TestCase("' OR '1'='1", "' OR '1'='1")]
+        [TestCase("<script>alert(1)</script>", "<script>alert(1)</script>")]
         public void LoginWithWrongUserNameOrPassword(string userName, string password)
         {
             string expectedTopErrorText = "Sorry, there was a problem.";
@@ -70,14 +72,6 @@ namespace TestRail.Tests.UI
                 Assert.That(loginPage.GetLoginErrorMessageText(), Is.EqualTo(expectedLoginErrorText));
             });
         }
-
-        private static readonly string[][] TestCasesForLoginWithWrongData =
-        [
-            ["UserName", "12345"],
-            ["UserName", "Pappword"],
-            ["' OR '1'='1", "' OR '1'='1"],
-            ["<script>alert(1)</script>", "<script>alert(1)</script>"]
-        ];
 
         [Test]
         [Category("ToFail")]
