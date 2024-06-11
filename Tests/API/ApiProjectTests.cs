@@ -14,7 +14,7 @@ namespace TestRail.Tests.API
     {
         [Test]
         [Category("SmokeTests")]
-        [AllureDescription("Verifying the addition of a project with test data from the file")]
+        [AllureDescription("Verifying the addition of a project with test data from the .json file")]
         [AllureSeverity(SeverityLevel.critical)]
         [AllureStory("Add a project")]
         [TestCaseSource(nameof(ProjectPositiveTestCases))]

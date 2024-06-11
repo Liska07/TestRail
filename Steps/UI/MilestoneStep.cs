@@ -15,7 +15,7 @@ namespace TestRail.Steps.UI
         [AllureStep("Add a milestone with a given milestone model")]
         public MilestoneListPage AddMilestoneWithModel(int projectId, MilestoneModel milestoneModel)
         {
-            var milestoneListPage = new NavigationStep(driver).NavigateToMilestone(projectId);
+            var milestoneListPage = new NavigationStep(driver).NavigateToMilestoneList(projectId);
             milestoneListPage.AddMilestoneButton().Click();
             var addMilestonePage = new AddMilestonePage(driver, projectId);
             addMilestonePage.NameField().SendKeys(milestoneModel.Name);

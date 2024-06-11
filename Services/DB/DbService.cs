@@ -7,7 +7,7 @@ namespace TestRail.Services.DB
     public class DbService
     {
         private NpgsqlConnection _connection;
-        private Logger _logger = LogManager.GetCurrentClassLogger();
+        private readonly Logger _logger = LogManager.GetCurrentClassLogger();
 
         public DbService(NpgsqlConnection connection)
         {
@@ -26,10 +26,20 @@ namespace TestRail.Services.DB
                 var project = new ProjectModel(reader.GetString(reader.GetOrdinal("name")))
                 {
                     Id = reader.GetInt32(reader.GetOrdinal("id")),
-                    Announcement = reader.IsDBNull(reader.GetOrdinal("announcement")) ? null : reader.GetString(reader.GetOrdinal("announcement")),
-                    IsShowAnnouncement = reader.IsDBNull(reader.GetOrdinal("announcement")) ? false : reader.GetBoolean(reader.GetOrdinal("is_show_announcement")),
+
+                    Announcement = reader.IsDBNull(reader.GetOrdinal("announcement")) 
+                        ? null 
+                        : reader.GetString(reader.GetOrdinal("announcement")),
+
+                    IsShowAnnouncement = reader.IsDBNull(reader.GetOrdinal("announcement")) 
+                        ? false 
+                        : reader.GetBoolean(reader.GetOrdinal("is_show_announcement")),
+
                     ProjectTypeByValue = reader.GetInt32(reader.GetOrdinal("project_type")),
-                    IsEnableTestCase = reader.IsDBNull(reader.GetOrdinal("announcement")) ? false : reader.GetBoolean(reader.GetOrdinal("is_enable_test_case"))
+
+                    IsEnableTestCase = reader.IsDBNull(reader.GetOrdinal("announcement")) 
+                        ? false 
+                        : reader.GetBoolean(reader.GetOrdinal("is_enable_test_case"))
                 };
 
                 projectList.Add(project);
@@ -50,7 +60,10 @@ namespace TestRail.Services.DB
                 var milestone = new MilestoneModel(reader.GetString(reader.GetOrdinal("name")))
                 {
                     Id = reader.GetInt32(reader.GetOrdinal("id")),
-                    Description = reader.IsDBNull(reader.GetOrdinal("description")) ? null : reader.GetString(reader.GetOrdinal("description"))
+
+                    Description = reader.IsDBNull(reader.GetOrdinal("description")) 
+                        ? null 
+                        : reader.GetString(reader.GetOrdinal("description"))
                 };
                 
                 milestoneList.Add(milestone);

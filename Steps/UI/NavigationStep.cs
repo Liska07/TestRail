@@ -16,7 +16,7 @@ namespace TestRail.Steps.UI
             return new ProjectListPage(driver, true);
         }
 
-        public MilestoneListPage NavigateToMilestone(int projectId)
+        public MilestoneListPage NavigateToMilestoneList(int projectId)
         {
             return new MilestoneListPage(driver, projectId, true);
         }

@@ -15,7 +15,8 @@ namespace TestRail.Tests.API
         {
             string projectName = "EAntonova";
 
-            List<ProjectModel> projects = projectApiStep.GetProjectsListByPartialProjectName(projectName);
+            List<ProjectModel> projects = projectApiStep
+                .GetProjectsListByPartialProjectName(projectName);
 
             foreach (ProjectModel project in projects)
             {

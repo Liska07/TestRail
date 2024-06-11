@@ -18,7 +18,7 @@ namespace TestRail.Tests.UI
         public void SetUp()
         {
             userStep.SuccessfulLogin();
-            _addedProject = projectApiStep.AddProjectAndReturnIt(new ProjectModel($"EAntonova {Guid.NewGuid()}"));
+            _addedProject = projectApiStep.AddProjectAndReturnIt(new ProjectModel(NameGenerator.CreateProjectName()));
             _projectId = _addedProject.GetId();
         }
 
@@ -57,7 +57,7 @@ namespace TestRail.Tests.UI
             var mailstoneInfo = new MilestoneModel(milestoneName);
 
             var milestoneListPage = milestoneStep.AddMilestoneWithModel(_projectId, mailstoneInfo);
-            milestoneListPage = navigationStep.NavigateToMilestone(_projectId);
+            milestoneListPage = navigationStep.NavigateToMilestoneList(_projectId);
             milestoneListPage = milestoneStep.DeleteMilestoneByName(_projectId, milestoneName);
 
             Assert.Multiple(() =>

@@ -17,7 +17,7 @@ on:
        - ToFail
  
   schedule:
-    - cron: '55 13 * * *'
+    - cron: '40 13 * * *'
 
 jobs:
 

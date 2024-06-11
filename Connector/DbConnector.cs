@@ -6,7 +6,7 @@ namespace TestRail.Connector
 {
     public class DbConnector
     {
-        private Logger _logger = LogManager.GetCurrentClassLogger();
+        private readonly Logger _logger = LogManager.GetCurrentClassLogger();
         public NpgsqlConnection Connection { get; init; }
         public DbConnector()
         {
