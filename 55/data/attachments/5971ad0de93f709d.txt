@@ -1,3 +1,0 @@
-2024/06/10 15:26:04.840|INFO|Successful login     
-2024/06/10 15:26:06.763|INFO|Added 'EAntonova fcea5275-6acd-4ced-9e67-56dcef824103' project     
-2024/06/10 15:26:07.891|INFO|Deleted 'EAntonova fcea5275-6acd-4ced-9e67-56dcef824103' project     
