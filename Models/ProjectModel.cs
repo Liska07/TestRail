@@ -30,7 +30,7 @@ namespace TestRail.Models
         public override string ToString()
         {
             return $"{nameof(Id)}: {Id}, {nameof(Name)}: {Name}, {nameof(Announcement)}: {Announcement}, " +
-                   $"{nameof(IsShowAnnouncement)}: {IsShowAnnouncement}, {nameof(ProjectTypeByValue)}: {ProjectTypeByValue}" +
+                   $"{nameof(IsShowAnnouncement)}: {IsShowAnnouncement}, {nameof(ProjectTypeByValue)}: {ProjectTypeByValue}," +
                    $"{nameof(IsEnableTestCase)}: {IsEnableTestCase}";
         }
 

@@ -23,13 +23,13 @@ namespace TestRail.Services.DB
 
             while (reader.Read())
             {
-                var project = new ProjectModel(reader.GetString(reader.GetOrdinal("name")))
+                var project = new ProjectModel(reader.GetString(reader.GetOrdinal("name")).Trim())
                 {
                     Id = reader.GetInt32(reader.GetOrdinal("id")),
 
                     Announcement = reader.IsDBNull(reader.GetOrdinal("announcement")) 
                         ? null 
-                        : reader.GetString(reader.GetOrdinal("announcement")),
+                        : reader.GetString(reader.GetOrdinal("announcement")).Trim(),
 
                     IsShowAnnouncement = reader.IsDBNull(reader.GetOrdinal("is_show_announcement")) 
                         ? false 
@@ -57,13 +57,13 @@ namespace TestRail.Services.DB
 
             while (reader.Read())
             {
-                var milestone = new MilestoneModel(reader.GetString(reader.GetOrdinal("name")))
+                var milestone = new MilestoneModel(reader.GetString(reader.GetOrdinal("name")).Trim())
                 {
                     Id = reader.GetInt32(reader.GetOrdinal("id")),
 
                     Description = reader.IsDBNull(reader.GetOrdinal("description")) 
                         ? null 
-                        : reader.GetString(reader.GetOrdinal("description"))
+                        : reader.GetString(reader.GetOrdinal("description")).Trim()
                 };
                 
                 milestoneList.Add(milestone);
