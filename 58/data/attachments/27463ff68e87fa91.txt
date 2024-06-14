@@ -1,3 +1,0 @@
-2024/06/10 20:57:43.295|INFO|Successful login     
-2024/06/10 20:57:44.277|INFO|Added 'EAntonova 86b96adf-9eb2-4eb8-b006-16899c322496' project     
-2024/06/10 20:57:45.177|INFO|Deleted 'EAntonova 86b96adf-9eb2-4eb8-b006-16899c322496' project     
