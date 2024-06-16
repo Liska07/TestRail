@@ -1,2 +1,0 @@
-2024/06/10 21:05:02.075|INFO|Added a project: {"id":1014,"name":"EAntonova 0e5e498f-b0a9-414f-9f65-424327675406","announcement":null,"show_announcement":false,"is_completed":false,"completed_on":null,"suite_mode":3,"default_role_id":null,"case_statuses_enabled":false,"url":"https:\/\/liska01.testrail.io\/index.php?\/projects\/overview\/1014","users":[],"groups":[]}. StatusCode.OK     
-2024/06/10 21:05:02.415|INFO|Deleted a project with id = 1014. StatusCode.OK     
