@@ -137,6 +137,7 @@ namespace TestRail.Tests.API
             {
                 Assert.That(response.StatusCode == HttpStatusCode.OK);
                 Assert.That(updatedProject.IsEqual(updatedProjectInfo));
+                Assert.That(baseProject.GetId(), Is.EqualTo(updatedProject.GetId()));
                 Assert.That(projectApiStep.IsProjectInList(updatedProject.GetId()));
             });
         }

@@ -59,7 +59,7 @@ jobs:
     # Execute login tests
     - name: Execute Login Tests
       if: github.event.inputs.test_category == 'Login'
-      run: dotnet test --filter Category=LoginTests
+      run: dotnet test --filter "Category=LoginTests&Category!=ToFail"
 
     # Execute project tests
     - name: Execute Project Tests

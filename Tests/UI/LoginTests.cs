@@ -5,11 +5,11 @@ using TestRail.Utils;
 
 namespace TestRail.Tests.UI
 {
+    [Category("LoginTests")]
     [AllureFeature("LoginTests")]
     public class LoginTests : BaseTest
     {
         [Test]
-        [Category("LoginTests")]
         [Category("SmokeTests")]
         [AllureDescription("Check login with the correct username and password")]
         [AllureSeverity(SeverityLevel.blocker)]
@@ -19,7 +19,6 @@ namespace TestRail.Tests.UI
         }
 
         [Test]
-        [Category("LoginTests")]
         [AllureDescription("Check the error messages if username and password are not entered")]
         [AllureSeverity(SeverityLevel.normal)]
         public void LoginWithoutUserNameAndPassword()
@@ -37,7 +36,6 @@ namespace TestRail.Tests.UI
         }
 
         [Test]
-        [Category("LoginTests")]
         [AllureDescription("Check the error message if password is less than 5 characters")]
         [AllureSeverity(SeverityLevel.normal)]
         public void LoginWithShortPassword()
@@ -52,7 +50,6 @@ namespace TestRail.Tests.UI
         }
 
         [Test]
-        [Category("LoginTests")]
         [Category("SmokeTests")]
         [AllureDescription("Check the error messages if username or password are incorrect")]
         [AllureSeverity(SeverityLevel.critical)]
