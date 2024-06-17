@@ -13,7 +13,7 @@ namespace TestRail.BaseEntities
         protected DashboardPage dashboardPage;
         protected AddProjectPage addProjectPage;
         protected ProjectListPage projectListPage;
-        protected ConfirmationProjectPage confirmationPage;
+        protected ConfirmationProjectPage confirmationProjectPage;
         protected ConfirmationMilestonePage confirmationMilestonePage;
         protected readonly Logger logger = LogManager.GetCurrentClassLogger();
         public BaseStep(IWebDriver driver)
@@ -23,7 +23,7 @@ namespace TestRail.BaseEntities
             dashboardPage = new DashboardPage(driver);
             addProjectPage = new AddProjectPage(driver);
             projectListPage = new ProjectListPage(driver);
-            confirmationPage = new ConfirmationProjectPage(driver);
+            confirmationProjectPage = new ConfirmationProjectPage(driver);
             confirmationMilestonePage = new ConfirmationMilestonePage(driver);
         }
     }

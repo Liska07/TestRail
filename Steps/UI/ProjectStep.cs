@@ -48,15 +48,15 @@ namespace TestRail.Steps.UI
         public ConfirmationProjectPage ClickDeleteButtonByProjectName(string projectName)
         {
             projectListPage.GetDeleteButtonByProjectName(projectName).Click();
-            return confirmationPage;
+            return confirmationProjectPage;
         }
 
         [AllureStep("Delete a project with the specified name")]
         public ProjectListPage DeleteProjectByName(string projectName)
         {
             ClickDeleteButtonByProjectName(projectName);
-            confirmationPage.IsDeleteProjectCheckbox().Select();
-            confirmationPage.OkButton().Click();
+            confirmationProjectPage.IsDeleteProjectCheckbox().Select();
+            confirmationProjectPage.OkButton().Click();
             logger.Info($"Deleted '{projectName}' project");
             return projectListPage;
         }

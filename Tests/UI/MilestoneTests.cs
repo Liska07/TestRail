@@ -17,7 +17,7 @@ namespace TestRail.Tests.UI
         [SetUp]
         public void SetUp()
         {
-            userStep.SuccessfulLogin();
+            loginStep.SuccessfulLogin();
             _addedProject = projectApiStep.AddProjectAndReturnIt(
                 new ProjectModel(NameGenerator.CreateProjectName()));
             _projectId = _addedProject.GetId();

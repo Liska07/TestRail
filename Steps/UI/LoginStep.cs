@@ -6,9 +6,9 @@ using TestRail.Utils;
 
 namespace TestRail.Steps.UI
 {
-    public class UserStep : BaseStep
+    public class LoginStep : BaseStep
     {
-        public UserStep(IWebDriver driver) : base(driver)
+        public LoginStep(IWebDriver driver) : base(driver)
         {
         }
 

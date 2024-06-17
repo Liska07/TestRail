@@ -15,7 +15,7 @@ namespace TestRail.Tests.UI
         [AllureSeverity(SeverityLevel.blocker)]
         public void PositiveLogin()
         {
-            Assert.That(userStep.SuccessfulLogin().AddProjectButton().Displayed);
+            Assert.That(loginStep.SuccessfulLogin().AddProjectButton().Displayed);
         }
 
         [Test]
@@ -26,7 +26,7 @@ namespace TestRail.Tests.UI
             string expectedUserNameErrorText = "Email/Login is required.";
             string expectedPasswordErrorText = "Password is required.";
 
-            userStep.UnsuccessfulLogin();
+            loginStep.UnsuccessfulLogin();
 
             Assert.Multiple(() =>
             {
@@ -44,7 +44,7 @@ namespace TestRail.Tests.UI
             string password = "1234";
             string expectedPasswordErrorText = "Password is too short (5 characters required).";
 
-            userStep.UnsuccessfulLogin(userName, password);
+            loginStep.UnsuccessfulLogin(userName, password);
 
             Assert.That(loginPage.GetPasswordErrorMessageText(), Is.EqualTo(expectedPasswordErrorText));
         }
@@ -61,7 +61,7 @@ namespace TestRail.Tests.UI
             string expectedTopErrorText = "Sorry, there was a problem.";
             string expectedLoginErrorText = "Email/Login or Password is incorrect. Please try again.";
 
-            userStep.UnsuccessfulLogin(userName, password);
+            loginStep.UnsuccessfulLogin(userName, password);
 
             Assert.Multiple(() =>
             {
@@ -80,7 +80,7 @@ namespace TestRail.Tests.UI
             string expectedUserNameErrorText = "Email/Login is required.";
             string expectedPasswordErrorText = "Password is too short (5 characters required).";
 
-            userStep.UnsuccessfulLogin(password: password);
+            loginStep.UnsuccessfulLogin(password: password);
 
             Assert.Multiple(() =>
             {

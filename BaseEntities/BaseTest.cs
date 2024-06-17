@@ -12,7 +12,7 @@ namespace TestRail.BaseEntities
     {
         protected IWebDriver driver;
         //Steps
-        protected UserStep userStep;
+        protected LoginStep loginStep;
         protected ProjectStep projectStep;
         protected NavigationStep navigationStep;
         protected MilestoneStep milestoneStep;
@@ -21,7 +21,7 @@ namespace TestRail.BaseEntities
         protected DashboardPage dashboardPage;
         protected AddProjectPage addProjectPage;
         protected ProjectListPage projectListPage;
-        protected ConfirmationProjectPage confirmationPage;
+        protected ConfirmationProjectPage confirmationProjectPage;
 
         [SetUp]
         [AllureBefore("Setup driver")]
@@ -30,7 +30,7 @@ namespace TestRail.BaseEntities
             driver = new Browser().Driver;
             new LoginPage(driver, true);
             //Steps
-            userStep = new UserStep(driver);
+            loginStep = new LoginStep(driver);
             projectStep = new ProjectStep(driver);
             navigationStep = new NavigationStep(driver);
             milestoneStep = new MilestoneStep(driver);
@@ -39,7 +39,7 @@ namespace TestRail.BaseEntities
             dashboardPage = new DashboardPage(driver);
             addProjectPage = new AddProjectPage(driver);
             projectListPage = new ProjectListPage(driver);
-            confirmationPage = new ConfirmationProjectPage(driver);
+            confirmationProjectPage = new ConfirmationProjectPage(driver);
         }
 
         [TearDown]

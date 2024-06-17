@@ -13,7 +13,7 @@ namespace TestRail.Tests.UI
         [SetUp]
         public void SetUp()
         {
-            userStep.SuccessfulLogin();
+            loginStep.SuccessfulLogin();
         }
 
         [Test]
@@ -99,10 +99,10 @@ namespace TestRail.Tests.UI
 
             Assert.Multiple(() =>
             {
-                Assert.That(confirmationPage.GetTitleText(), Is.EqualTo(expectedConformationTitleText));
-                Assert.That(confirmationPage.GetTopMessageText(), Is.EqualTo(expectedTopMessageText));
-                Assert.That(confirmationPage.GetExtraMessageText(), Is.EqualTo(expectedExtraMessageText));
-                Assert.That(confirmationPage.GetConfirmMessageText(), Is.EqualTo(expectedConfirmMessageText));
+                Assert.That(confirmationProjectPage.GetTitleText(), Is.EqualTo(expectedConformationTitleText));
+                Assert.That(confirmationProjectPage.GetTopMessageText(), Is.EqualTo(expectedTopMessageText));
+                Assert.That(confirmationProjectPage.GetExtraMessageText(), Is.EqualTo(expectedExtraMessageText));
+                Assert.That(confirmationProjectPage.GetConfirmMessageText(), Is.EqualTo(expectedConfirmMessageText));
             });
         }
 
@@ -118,7 +118,7 @@ namespace TestRail.Tests.UI
             projectStep.AddProjectWithModel(new ProjectModel(projectName));
             navigationStep.NavigateToProjectList();
             projectStep.ClickDeleteButtonByProjectName(projectName);
-            confirmationPage.CancelButton().Click();
+            confirmationProjectPage.CancelButton().Click();
 
 
             Assert.Multiple(() =>
