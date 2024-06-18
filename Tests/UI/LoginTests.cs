@@ -72,7 +72,7 @@ namespace TestRail.Tests.UI
 
         [Test]
         [Category("ToFail")]
-        [AllureDescription("Check the error messages if username is empty and password is less than 5 characters")]
+        [AllureDescription("Check capturing and attaching a screenshot of the screen upon test failure")]
         [AllureSeverity(SeverityLevel.normal)]
         public void LoginWithEmptyUserNameAndShortPassword()
         {
