@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"broken","Tue Jun 18 20:07:37 GMT 2024","Tue Jun 18 20:07:52 GMT 2024","14476","","","","LoginTests","LoginWithEmptyUserNameAndShortPassword","LoginWithEmptyUserNameAndShortPassword","Check capturing and attaching a screenshot of the screen upon test failure"
