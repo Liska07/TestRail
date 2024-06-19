@@ -1,3 +1,0 @@
-2024/06/11 13:10:00.121|INFO|Successful login     
-2024/06/11 13:10:01.274|INFO|Added 'EAntonova ce3873a3-45e1-4d46-a2dd-522e2ac5e478' project     
-2024/06/11 13:10:02.174|INFO|Deleted 'EAntonova ce3873a3-45e1-4d46-a2dd-522e2ac5e478' project     
