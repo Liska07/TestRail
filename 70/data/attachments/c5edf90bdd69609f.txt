@@ -1,3 +1,0 @@
-2024/06/11 15:00:10.776|INFO|Successful login     
-2024/06/11 15:00:12.293|INFO|Added 'EAntonova 3007e645-72e3-40cd-9bc7-f8ac3290cd12' project     
-2024/06/11 15:00:13.497|INFO|Deleted 'EAntonova 3007e645-72e3-40cd-9bc7-f8ac3290cd12' project     
