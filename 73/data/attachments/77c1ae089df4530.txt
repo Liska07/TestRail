@@ -1,3 +1,0 @@
-2024/06/11 18:39:45.826|INFO|Successful login     
-2024/06/11 18:39:47.009|INFO|Added 'EAntonova 5bea5c21-98e0-455c-89cc-981829939bd9' project     
-2024/06/11 18:39:48.103|INFO|Deleted 'EAntonova 5bea5c21-98e0-455c-89cc-981829939bd9' project     

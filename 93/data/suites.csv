@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Jun 21 15:10:20 GMT 2024","Fri Jun 21 15:10:32 GMT 2024","12748","","","","ProjectCleaner","DeleteAllProjectsByPartialName","DeleteAllProjectsByPartialName","Deletes all projects where the project name contains a specified partial name"
