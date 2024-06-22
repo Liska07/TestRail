@@ -1,3 +1,0 @@
-2024/06/11 21:36:09.874|INFO|Successful login     
-2024/06/11 21:36:11.335|INFO|Added 'EAntonova 727a60c5-04be-4535-9610-af686fade72b' project     
-2024/06/11 21:36:12.553|INFO|Deleted 'EAntonova 727a60c5-04be-4535-9610-af686fade72b' project     
