@@ -23,8 +23,9 @@ namespace TestRail.Core
                     Driver = new DriverFactory().GetEdgeDriver();
                     break;
                 default:
-                    _logger.Error($"There is no implementation for '{browserType}'!");
-                    throw new NotImplementedException($"There is no implementation for '{browserType}' browser!");
+                    string errorMessage = $"There is no implementation for '{browserType}' browser.";
+                    _logger.Error(errorMessage);
+                    throw new NotImplementedException(errorMessage);
             }
 
             Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(Configurator.GetTimeOut());
