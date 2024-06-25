@@ -1,3 +1,0 @@
-2024/06/14 13:43:09.863|INFO|Successful login     
-2024/06/14 13:43:11.995|INFO|Added 'EAntonova b0777af8-6eb6-44a4-aa0f-7d5a8c1f9e25' project     
-2024/06/14 13:43:13.204|INFO|Deleted 'EAntonova b0777af8-6eb6-44a4-aa0f-7d5a8c1f9e25' project     
