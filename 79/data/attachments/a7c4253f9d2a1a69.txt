@@ -1,3 +1,0 @@
-2024/06/15 13:42:43.004|INFO|Successful login     
-2024/06/15 13:42:44.435|INFO|Added 'EAntonova b211d1ed-2ee4-4fab-bcec-7d90bd9dcd38' project     
-2024/06/15 13:42:45.383|INFO|Deleted 'EAntonova b211d1ed-2ee4-4fab-bcec-7d90bd9dcd38' project     
