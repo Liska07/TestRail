@@ -1,3 +1,0 @@
-2024/06/17 13:42:54.515|INFO|Successful login     
-2024/06/17 13:42:56.174|INFO|Added 'EAntonova 4b854366-0cf0-4f3d-a675-05fe9f90a935' project     
-2024/06/17 13:42:57.313|INFO|Deleted 'EAntonova 4b854366-0cf0-4f3d-a675-05fe9f90a935' project     
