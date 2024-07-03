@@ -1,3 +1,0 @@
-2024/06/18 13:42:57.464|INFO|Successful login     
-2024/06/18 13:42:59.131|INFO|Added 'EAntonova d53837ba-d8ee-4b3a-9d1f-4d52bbc86a01' project     
-2024/06/18 13:43:00.046|INFO|Deleted 'EAntonova d53837ba-d8ee-4b3a-9d1f-4d52bbc86a01' project     
