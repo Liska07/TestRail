@@ -1,0 +1,3 @@
+2024/07/03 13:42:41.506|INFO|Successful login     
+2024/07/03 13:42:42.762|INFO|Added 'EAntonova bd8ac1bc-6a9f-4d22-be7f-45dff6185a7e' project     
+2024/07/03 13:42:44.355|INFO|Deleted 'EAntonova bd8ac1bc-6a9f-4d22-be7f-45dff6185a7e' project     

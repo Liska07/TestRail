@@ -1,3 +1,0 @@
-2024/06/19 14:45:18.004|INFO|Successful login     
-2024/06/19 14:45:19.748|INFO|Added 'EAntonova 59ac7b14-a793-4c50-b5a5-5a812422b4ea' project     
-2024/06/19 14:45:20.854|INFO|Deleted 'EAntonova 59ac7b14-a793-4c50-b5a5-5a812422b4ea' project     
