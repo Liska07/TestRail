@@ -19,7 +19,7 @@ namespace TestRail.BaseEntities
         //Pages
         protected LoginPage loginPage;
         protected DashboardPage dashboardPage;
-        protected AddProjectPage addProjectPage;
+        protected ProjectPage projectPage;
         protected ProjectListPage projectListPage;
         protected ConfirmationProjectPage confirmationProjectPage;
 
@@ -37,7 +37,7 @@ namespace TestRail.BaseEntities
             //Pages
             loginPage = new LoginPage(driver);
             dashboardPage = new DashboardPage(driver);
-            addProjectPage = new AddProjectPage(driver);
+            projectPage = new ProjectPage(driver);
             projectListPage = new ProjectListPage(driver);
             confirmationProjectPage = new ConfirmationProjectPage(driver);
         }

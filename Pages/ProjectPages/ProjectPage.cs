@@ -4,18 +4,18 @@ using TestRail.Elements;
 
 namespace TestRail.Pages.ProjectPages
 {
-    public class AddProjectPage : BasePage
+    public class ProjectPage : BasePage
     {
         private static readonly By _nameFieldBy = By.Id("name");
         private static readonly By _announcementFieldBy = By.Name("announcement");
         private static readonly By _isShowAnnouncementCheckboxBy = By.Id("show_announcement");
         private static readonly By _projectTypeRadioButtonBy = By.Name("suite_mode");
         private static readonly By _isEnableTestCaseCheckboxBy = By.Id("case_statuses_enabled");
-        private static readonly By _addProjectButtonBy = By.Id("accept");
+        private static readonly By _acceptProjectButtonBy = By.Id("accept");
         private static readonly By _errorMessageBy = By.CssSelector(".message.message-error:not([class*='validationError'])");
         private const string _endPoint = "/index.php?/admin/projects/add";
 
-        public AddProjectPage(IWebDriver driver) : base(driver)
+        public ProjectPage(IWebDriver driver) : base(driver)
         {
         }
 
@@ -24,7 +24,7 @@ namespace TestRail.Pages.ProjectPages
         public Checkbox IsShowAnnouncementCheckbox() => new Checkbox(driver, _isShowAnnouncementCheckboxBy);
         public RadioButton ProjectTypeRadioButton() => new RadioButton(driver, _projectTypeRadioButtonBy);
         public Checkbox IsEnableTestCaseCheckbox() => new Checkbox(driver, _isEnableTestCaseCheckboxBy);
-        public Button AddProjectButton() => new Button(driver, _addProjectButtonBy);
+        public Button AcceptProjectButton() => new Button(driver, _acceptProjectButtonBy);
         public string GetErrorMessageText() => new Message(driver, _errorMessageBy).Text;
         public override string GetEndpoint()
         {
@@ -34,7 +34,7 @@ namespace TestRail.Pages.ProjectPages
         {
             try
             {
-                return AddProjectButton().Displayed;
+                return AcceptProjectButton().Displayed;
             }
             catch (Exception ex)
             {

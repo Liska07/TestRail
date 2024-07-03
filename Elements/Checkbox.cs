@@ -11,14 +11,25 @@ namespace TestRail.Elements
             _uiElement = new UiElement(driver, locator);
         }
 
-        public Checkbox(IWebDriver driver, IWebElement element)
+        public void Select()
         {
-            _uiElement = new UiElement(driver, element);
+            if (!_uiElement.Selected)
+            {
+                _uiElement.Click();
+            }
         }
-        public void Select() => _uiElement.Click();
+
+        public void Deselect()
+        {
+            if (_uiElement.Selected)
+            {
+                _uiElement.Click();
+            }
+        }
         public bool Displayed => _uiElement.Displayed;
         public bool Enabled => _uiElement.Enabled;
         public string Text => _uiElement.Text;
+        public bool Selected => _uiElement.Selected;
 
         public string GetAttribute(string attributeName) => _uiElement.GetAttribute(attributeName);
         public bool IsChecked()

@@ -45,6 +45,9 @@ namespace TestRail.Pages.ProjectPages
             return new Button(driver, By.XPath($"//a[contains(text(),'{projectName}')]/ancestor::tr//div[@data-testid='projectDeleteButton']"));
         }
 
-
+        public Button GetProjectLinkByProjectName(string projectName)
+        {
+            return new Button(driver, By.XPath($"//a[text()='{projectName}']"));
+        }
     }
 }

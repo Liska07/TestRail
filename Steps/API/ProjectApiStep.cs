@@ -76,7 +76,7 @@ namespace TestRail.Steps.API
             return selectedProjects;
         }
 
-        [AllureStep("Add a project with a given project model by API and return response")]
+        [AllureStep("Added a project by API and return response")]
         public RestResponse AddProject(ProjectModel projectToCreate)
         {
             const string endPoint = "/index.php?/api/v2/add_project";
@@ -87,7 +87,7 @@ namespace TestRail.Steps.API
             return response;
         }
 
-        [AllureStep("Add a project with a given project model by API and return added project")]
+        [AllureStep("Added a project by API and return added project")]
         public ProjectModel AddProjectAndReturnIt(ProjectModel projectToCreate)
         {
             var response = AddProject(projectToCreate);
@@ -96,7 +96,7 @@ namespace TestRail.Steps.API
             return createdProject;
         }
 
-        [AllureStep("Delete a given project by API and return response")]
+        [AllureStep("Deleted a given project by API and return response")]
         public RestResponse DeleteProject(ProjectModel projectToDelete)
         {
             int project_id = projectToDelete.GetId();
@@ -109,7 +109,7 @@ namespace TestRail.Steps.API
             return response;
         }
 
-        [AllureStep("Update a given project by API and return response")]
+        [AllureStep("Updated a given project by API and return response")]
         public RestResponse UpdateProject(ProjectModel projectToUpdate, ProjectModel newProjectInfo)
         {
             int project_id = projectToUpdate.GetId();

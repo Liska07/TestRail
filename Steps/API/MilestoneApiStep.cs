@@ -51,7 +51,7 @@ namespace TestRail.Steps.API
             return milestones.Any(milestone => milestone.Id == milestone_id);
         }
 
-        [AllureStep("Add a milestone with a given milestone model by API and return response")]
+        [AllureStep("Added a milestone by API and return response")]
         public RestResponse AddMilestone(MilestoneModel milestoneToCreate, int project_id)
         {
             string endPoint = $"index.php?/api/v2/add_milestone/{project_id}";

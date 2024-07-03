@@ -11,7 +11,7 @@ namespace TestRail.BaseEntities
         protected IWebDriver driver;
         protected LoginPage loginPage;
         protected DashboardPage dashboardPage;
-        protected AddProjectPage addProjectPage;
+        protected ProjectPage projectPage;
         protected ProjectListPage projectListPage;
         protected ConfirmationProjectPage confirmationProjectPage;
         protected ConfirmationMilestonePage confirmationMilestonePage;
@@ -21,7 +21,7 @@ namespace TestRail.BaseEntities
             this.driver = driver;
             loginPage = new LoginPage(driver);
             dashboardPage = new DashboardPage(driver);
-            addProjectPage = new AddProjectPage(driver);
+            projectPage = new ProjectPage(driver);
             projectListPage = new ProjectListPage(driver);
             confirmationProjectPage = new ConfirmationProjectPage(driver);
             confirmationMilestonePage = new ConfirmationMilestonePage(driver);

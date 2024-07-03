@@ -10,7 +10,7 @@ namespace TestRail.Tests.API
 {
     [Category("ProjectTests")]
     [AllureFeature("ProjectTests")]
-    public class ApiProjectTests : BaseApiTest
+    public class ProjectApiTests : BaseApiTest
     {
         [Test]
         [Category("SmokeTests")]
@@ -42,11 +42,11 @@ namespace TestRail.Tests.API
         }
 
         [Test]
-        [AllureStory("Add a project")]
         [Category("SmokeTests")]
         [AllureDescription("Verifying a response with invalid data")]
         [AllureSeverity(SeverityLevel.critical)]
         [TestCaseSource(nameof(ProjectNegativeTestCases))]
+        [AllureStory("Add a project")]
         public void AddProjectNegativeAPI(Dictionary<string, object> project, string expectedResponseContent)
         {
             const string endPoint = "/index.php?/api/v2/add_project";
@@ -87,10 +87,10 @@ namespace TestRail.Tests.API
         };
 
         [Test]
-        [AllureStory("Delete a project")]
         [Category("SmokeTests")]
         [AllureDescription("Verifying an added project has been deleted")]
         [AllureSeverity(SeverityLevel.critical)]
+        [AllureStory("Delete a project")]
         public void DeleteAddedProjectAPI()
         {
             ProjectModel addedProject = projectApiStep.AddProjectAndReturnIt(new ProjectModel(NameGenerator.CreateProjectName()));
@@ -105,10 +105,10 @@ namespace TestRail.Tests.API
         }
 
         [Test]
-        [AllureStory("Update a project")]
         [Category("SmokeTests")]
-        [AllureDescription("Verifying an added project has been updeleted")]
+        [AllureDescription("Verifying an added project has been updated")]
         [AllureSeverity(SeverityLevel.critical)]
+        [AllureStory("Update a project")]
         public void UpdateAddedProjectAPI()
         {
             ProjectModel baseProjectInfo = new ProjectModel("EAntonova Base Project Name")

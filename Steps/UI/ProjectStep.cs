@@ -13,52 +13,61 @@ namespace TestRail.Steps.UI
         {
         }
 
-        [AllureStep("Add a project with a given project model")]
-        public ProjectListPage AddProjectWithModel(ProjectModel projectModel)
+        [AllureStep("Added a project")]
+        public void AddProject(ProjectModel projectModel)
         {
             new NavigationStep(driver).NavigateToProjectList();
             projectListPage.AddProjectButton().Click();
+            FillProjectData(projectModel);
+            projectPage.AcceptProjectButton().Click();
+            logger.Info($"Added '{projectModel.Name}' project");
+        }
 
-            addProjectPage.NameField().SendKeys(projectModel.Name);
+        private void FillProjectData(ProjectModel projectModel)
+        {
+            projectPage.NameField().SendKeys(projectModel.Name);
 
             if (!string.IsNullOrEmpty(projectModel.Announcement))
             {
-                addProjectPage.AnnouncementField().SendKeys(projectModel.Announcement);
+                projectPage.AnnouncementField().SendKeys(projectModel.Announcement);
             }
 
             if (projectModel.IsShowAnnouncement == true)
             {
-                addProjectPage.IsShowAnnouncementCheckbox().Select();
+                projectPage.IsShowAnnouncementCheckbox().Select();
+            }
+            else
+            {
+                projectPage.IsShowAnnouncementCheckbox().Deselect();
             }
 
             if (projectModel.ProjectTypeByValue != null)
             {
-                addProjectPage.ProjectTypeRadioButton().SelectByValue(projectModel.ProjectTypeByValue);
+                projectPage.ProjectTypeRadioButton().SelectByValue(projectModel.ProjectTypeByValue);
             }
 
             if (projectModel.IsEnableTestCase == true)
             {
-                addProjectPage.IsEnableTestCaseCheckbox().Select();
+                projectPage.IsEnableTestCaseCheckbox().Select();
             }
-            addProjectPage.AddProjectButton().Click();
-            logger.Info($"Added '{projectModel.Name}' project");
-            return projectListPage;
+            else
+            {
+                projectPage.IsEnableTestCaseCheckbox().Deselect();
+            }
         }
 
-        public ConfirmationProjectPage ClickDeleteButtonByProjectName(string projectName)
+        public void ClickDeleteButtonByProjectName(string projectName)
         {
             projectListPage.GetDeleteButtonByProjectName(projectName).Click();
-            return confirmationProjectPage;
         }
 
-        [AllureStep("Delete a project with the specified name")]
-        public ProjectListPage DeleteProjectByName(string projectName)
+        [AllureStep("Deleted a project with the specified name")]
+        public void DeleteProjectByName(string projectName)
         {
             ClickDeleteButtonByProjectName(projectName);
             confirmationProjectPage.IsDeleteProjectCheckbox().Select();
             confirmationProjectPage.OkButton().Click();
             logger.Info($"Deleted '{projectName}' project");
-            return projectListPage;
         }
 
         public bool IsProjectInList(string projectName)
@@ -73,5 +82,21 @@ namespace TestRail.Steps.UI
                 return true;
             }
         }
+
+
+        public void OpenProjectPageByName(string projectName)
+        {
+            projectListPage.GetProjectLinkByProjectName(projectName).Click();
+        }
+
+        [AllureStep("Updated a project with the specified name")]
+        public void UpdateProject(string baseProjectName, ProjectModel updatedProjectInfo)
+        {
+            OpenProjectPageByName(baseProjectName);
+            FillProjectData(updatedProjectInfo);
+            projectPage.AcceptProjectButton().Click();
+            logger.Info($"Updated '{updatedProjectInfo.Name}' project");
+        }
+
     }
 }

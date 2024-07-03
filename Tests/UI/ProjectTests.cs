@@ -32,7 +32,7 @@ namespace TestRail.Tests.UI
                 IsEnableTestCase = true,
             };
 
-            projectStep.AddProjectWithModel(projectInfo);
+            projectStep.AddProject(projectInfo);
             navigationStep.NavigateToProjectList();
             ProjectModel addedProject = projectApiStep.GetProjectByItsName(projectName);
 
@@ -54,9 +54,9 @@ namespace TestRail.Tests.UI
             string expectedErrorMessageText = "Field Name is a required field.";
 
             dashboardPage.AddProjectButton().Click();
-            addProjectPage.AddProjectButton().Click();
+            projectPage.AcceptProjectButton().Click();
 
-            Assert.That(addProjectPage.GetErrorMessageText(), Is.EqualTo(expectedErrorMessageText));
+            Assert.That(projectPage.GetErrorMessageText(), Is.EqualTo(expectedErrorMessageText));
         }
 
         [Test]
@@ -69,7 +69,7 @@ namespace TestRail.Tests.UI
             string projectName = NameGenerator.CreateProjectName();
             string expectedMessageText = "Successfully deleted the project.";
 
-            projectStep.AddProjectWithModel(new ProjectModel(projectName));
+            projectStep.AddProject(new ProjectModel(projectName));
             navigationStep.NavigateToProjectList();
             projectStep.DeleteProjectByName(projectName);
 
@@ -93,7 +93,7 @@ namespace TestRail.Tests.UI
                 "You can alternatively also just set the project to completed or hide it from the dashboard via project permissions instead.";
             string expectedConfirmMessageText = "Yes, delete this project (cannot be undone)";
 
-            projectStep.AddProjectWithModel(new ProjectModel(projectName));
+            projectStep.AddProject(new ProjectModel(projectName));
             navigationStep.NavigateToProjectList();
             projectStep.ClickDeleteButtonByProjectName(projectName);
 
@@ -115,7 +115,7 @@ namespace TestRail.Tests.UI
         {
             string projectName = NameGenerator.CreateProjectName();
 
-            projectStep.AddProjectWithModel(new ProjectModel(projectName));
+            projectStep.AddProject(new ProjectModel(projectName));
             navigationStep.NavigateToProjectList();
             projectStep.ClickDeleteButtonByProjectName(projectName);
             confirmationProjectPage.CancelButton().Click();
@@ -125,6 +125,46 @@ namespace TestRail.Tests.UI
             {
                 Assert.That(projectStep.IsProjectInList(projectName));
                 Assert.That(projectApiStep.IsProjectInList(projectName));
+            });
+        }
+
+        [Test]
+        [Category("SmokeTests")]
+        [AllureDescription("Verifying an added project has been updated")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [AllureStory("Update a project")]
+        public void UpdateAddedProject()
+        {
+            string baseProjectName = NameGenerator.CreateProjectName();
+            ProjectModel baseProjectInfo = new ProjectModel(baseProjectName)
+            {
+                Announcement = "Test Project Announcement",
+                IsShowAnnouncement = true,
+                ProjectTypeByValue = 1,
+                IsEnableTestCase = true,
+            };
+
+            projectStep.AddProject(baseProjectInfo);
+            navigationStep.NavigateToProjectList();
+
+            string updatedProjectName = $"{baseProjectName} Updated";
+            ProjectModel updatedProjectInfo = new ProjectModel(updatedProjectName)
+            {
+                Announcement = "Updated Project Announcement",
+                IsShowAnnouncement = false,
+                ProjectTypeByValue = 2,
+                IsEnableTestCase = false,
+            };
+
+            projectStep.UpdateProject(baseProjectName, updatedProjectInfo);
+
+            ProjectModel updatedProject = projectApiStep.GetProjectByItsName(updatedProjectName);
+
+            Assert.Multiple(() =>
+            {
+                Assert.That(projectStep.IsProjectInList(updatedProjectName));
+                Assert.That(projectApiStep.IsProjectInList(updatedProjectName));
+                Assert.That(updatedProject.IsEqual(updatedProjectInfo));
             });
         }
     }

@@ -117,7 +117,7 @@ namespace TestRail.Elements
                         .SendKeys(text)
                         .Build()
                         .Perform();
-                    _logger.Warn("Sent keys using actions");
+                    _logger.Warn("Send keys using actions");
                 }
             }
             catch (Exception ex)

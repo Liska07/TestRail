@@ -12,7 +12,7 @@ namespace TestRail.Steps.UI
         {
         }
 
-        [AllureStep("Add a milestone with a given milestone model")]
+        [AllureStep("Added a milestone")]
         public MilestoneListPage AddMilestoneWithModel(int projectId, MilestoneModel milestoneModel)
         {
             var milestoneListPage = new NavigationStep(driver).NavigateToMilestoneList(projectId);
@@ -30,20 +30,18 @@ namespace TestRail.Steps.UI
             return milestoneListPage;
         }
 
-        public ConfirmationMilestonePage ClickDeleteButtonByMilestoneName(int projectId, string milestoneName)
+        public void ClickDeleteButtonByMilestoneName(int projectId, string milestoneName)
         {
             var milestoneListPage = new MilestoneListPage(driver, projectId);
             milestoneListPage.GetDeleteButtonByMilestoneName(milestoneName).Click();
-            return confirmationMilestonePage;
         }
 
-        [AllureStep("Delete a milestone with the specified name")]
-        public MilestoneListPage DeleteMilestoneByName(int projectId, string milestoneName)
+        [AllureStep("Deleted a milestone with the specified name")]
+        public void DeleteMilestoneByName(int projectId, string milestoneName)
         {
             ClickDeleteButtonByMilestoneName(projectId, milestoneName);
             confirmationMilestonePage.OkButton().Click();
             logger.Info($"Deleted {milestoneName} milestone");
-            return new MilestoneListPage(driver, projectId);
         }
     }
 }

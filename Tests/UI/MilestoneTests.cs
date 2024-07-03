@@ -59,7 +59,7 @@ namespace TestRail.Tests.UI
 
             var milestoneListPage = milestoneStep.AddMilestoneWithModel(_projectId, mailstoneInfo);
             milestoneListPage = navigationStep.NavigateToMilestoneList(_projectId);
-            milestoneListPage = milestoneStep.DeleteMilestoneByName(_projectId, milestoneName);
+            milestoneStep.DeleteMilestoneByName(_projectId, milestoneName);
 
             Assert.Multiple(() =>
             {

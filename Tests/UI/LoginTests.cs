@@ -15,7 +15,8 @@ namespace TestRail.Tests.UI
         [AllureSeverity(SeverityLevel.blocker)]
         public void PositiveLogin()
         {
-            Assert.That(loginStep.SuccessfulLogin().AddProjectButton().Displayed);
+            loginStep.SuccessfulLogin();
+            Assert.That(dashboardPage.AddProjectButton().Displayed);
         }
 
         [Test]
