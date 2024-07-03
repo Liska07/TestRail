@@ -1,1 +1,0 @@
-2024/06/19 13:43:02.300|INFO|Successful login     
