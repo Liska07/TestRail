@@ -135,6 +135,7 @@ namespace TestRail.Tests.UI
         [AllureStory("Update a project")]
         public void UpdateAddedProject()
         {
+            string expectedMessageText = "Successfully updated the project.";
             string baseProjectName = NameGenerator.CreateProjectName();
             ProjectModel baseProjectInfo = new ProjectModel(baseProjectName)
             {
@@ -162,6 +163,7 @@ namespace TestRail.Tests.UI
 
             Assert.Multiple(() =>
             {
+                Assert.That(projectListPage.GetMessageText(), Is.EqualTo(expectedMessageText));
                 Assert.That(projectStep.IsProjectInList(updatedProjectName));
                 Assert.That(projectApiStep.IsProjectInList(updatedProjectName));
                 Assert.That(updatedProject.IsEqual(updatedProjectInfo));

@@ -93,7 +93,7 @@ namespace TestRail.Steps.UI
             OpenProjectPageByName(baseProjectName);
             FillProjectData(updatedProjectInfo);
             projectPage.AcceptProjectButton().Click();
-            logger.Info($"Updated '{updatedProjectInfo.Name}' project");
+            logger.Info($"Updated '{updatedProjectInfo.Name}' project (previously '{baseProjectName}')");
         }
     }
 }
