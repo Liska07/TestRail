@@ -1,3 +1,0 @@
-2024/06/22 13:42:22.990|INFO|Successful login     
-2024/06/22 13:42:23.500|INFO|Added a project: {"id":1579,"name":"EAntonova 9b8966ba-22cd-4ef3-a55f-e9c864ec5b75","announcement":null,"show_announcement":false,"is_completed":false,"completed_on":null,"suite_mode":3,"default_role_id":null,"case_statuses_enabled":false,"url":"https:\/\/liska01.testrail.io\/index.php?\/projects\/overview\/1579","users":[],"groups":[]}. StatusCode.OK     
-2024/06/22 13:42:25.662|INFO|Added 'Release 3a6b1ba7-e0a1-4e70-92b6-88de9bca66d8' milestone     

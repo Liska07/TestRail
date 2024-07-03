@@ -1,3 +1,0 @@
-2024/06/22 13:42:27.875|INFO|Successful login     
-2024/06/22 13:42:29.200|INFO|Added 'EAntonova 3fbe5de9-549f-4121-9c83-50646276a714' project     
-2024/06/22 13:42:30.154|INFO|Deleted 'EAntonova 3fbe5de9-549f-4121-9c83-50646276a714' project     
