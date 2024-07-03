@@ -5,9 +5,9 @@ using TestRail.Utils;
 
 namespace TestRail.Steps.UI
 {
-    public class LoginStep : BaseStep
+    public class AuthenticationStep : BaseStep
     {
-        public LoginStep(IWebDriver driver) : base(driver)
+        public AuthenticationStep(IWebDriver driver) : base(driver)
         {
         }
 
@@ -28,6 +28,14 @@ namespace TestRail.Steps.UI
             loginPage.UserNameField().SendKeys(userName);
             loginPage.PasswordFeld().SendKeys(password);
             loginPage.LoginButton().Click();
+        }
+
+        [AllureStep("Logged out")]
+        public void Logout()
+        {
+            headerPage.UserNameButton().Click();
+            headerPage.LogoutButton().Click();
+            logger.Info("Logged out");
         }
     }
 }

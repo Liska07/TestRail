@@ -25,7 +25,7 @@ namespace TestRail.Steps.UI
                 addMilestonePage.DescriptionField().SendKeys(milestoneModel.Description);
             }
 
-            addMilestonePage.AddMilestoneButton().Click();
+            addMilestonePage.AcceptMilestoneButton().Click();
             logger.Info($"Added '{milestoneModel.Name}' milestone");
             return milestoneListPage;
         }

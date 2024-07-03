@@ -12,7 +12,7 @@ namespace TestRail.Pages
         public DashboardPage(IWebDriver driver) : base(driver)
         {
         }
-
+        
         public Button AddProjectButton() => new Button(driver, _addProjectButtonBy);
         public override string GetEndpoint()
         {

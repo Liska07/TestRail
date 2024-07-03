@@ -46,7 +46,7 @@ Available test categories for execution include:
 
 - **All:** Includes all tests (except tests from Database, ProjectCleaner, and ToFail categories).
 - **Smoke:** Essential tests to ensure basic functionality and health of the application.
-- **Login:** Tests related to user login functionality.
+- **Authentication:** Tests related to user login and logout functionality.
 - **Project:** Tests related specifically to project creation, deletion, and updates.
 - **Milestone:** Tests related specifically to milestone creation and deletion.
 - **Cleaner:** Runs separately to delete created entities as needed after testing.

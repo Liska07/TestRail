@@ -8,7 +8,7 @@ namespace TestRail.Tests.UI
 {
     [Category("ProjectTests")]
     [Category("MilestoneTests")]
-    [AllureFeature("MilestoneTests")]
+    [AllureFeature("Milestone Tests")]
     public class MilestoneTests : BaseTest
     {
         private ProjectModel _addedProject;
@@ -17,7 +17,7 @@ namespace TestRail.Tests.UI
         [SetUp]
         public void SetUp()
         {
-            loginStep.SuccessfulLogin();
+            authenticationStep.SuccessfulLogin();
             _addedProject = projectApiStep.AddProjectAndReturnIt(
                 new ProjectModel(NameGenerator.CreateProjectName()));
             _projectId = _addedProject.GetId();

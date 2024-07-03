@@ -7,13 +7,13 @@ using TestRail.Utils;
 namespace TestRail.Tests.UI
 {
     [Category("ProjectTests")]
-    [AllureFeature("ProjectTests")]
+    [AllureFeature("Project Tests")]
     public class ProjectTests : BaseTest
     {
         [SetUp]
         public void SetUp()
         {
-            loginStep.SuccessfulLogin();
+            authenticationStep.SuccessfulLogin();
         }
 
         [Test]

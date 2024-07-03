@@ -2,7 +2,6 @@
 using OpenQA.Selenium;
 using TestRail.BaseEntities;
 using TestRail.Models;
-using TestRail.Pages.ProjectPages;
 
 
 namespace TestRail.Steps.UI
@@ -83,7 +82,6 @@ namespace TestRail.Steps.UI
             }
         }
 
-
         public void OpenProjectPageByName(string projectName)
         {
             projectListPage.GetProjectLinkByProjectName(projectName).Click();
@@ -97,6 +95,5 @@ namespace TestRail.Steps.UI
             projectPage.AcceptProjectButton().Click();
             logger.Info($"Updated '{updatedProjectInfo.Name}' project");
         }
-
     }
 }

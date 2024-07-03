@@ -27,7 +27,7 @@ namespace TestRail.Tests.DB
         [AllureDescription("Verifying for adding a project by API with data from database")]
         [AllureSeverity(SeverityLevel.critical)]
         [AllureStory("Add a project")]
-        [AllureFeature("ProjectTests")]
+        [AllureFeature("Project Tests")]
         public void AddProjectDB()
         {
             List<ProjectModel> projectsFromDB = _dbService.GetAllProjects();
@@ -50,7 +50,7 @@ namespace TestRail.Tests.DB
         [AllureDescription("Verifying for adding a milestone by API with data from database")]
         [AllureSeverity(SeverityLevel.critical)]
         [AllureStory("Add a milestone")]
-        [AllureFeature("MilestoneTests")]
+        [AllureFeature("Milestone Tests")]
         public void AddMilestoneDB()
         {
             string projectName = NameGenerator.CreateProjectName();

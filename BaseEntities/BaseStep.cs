@@ -10,6 +10,7 @@ namespace TestRail.BaseEntities
     {
         protected IWebDriver driver;
         protected LoginPage loginPage;
+        protected HeaderPage headerPage;
         protected DashboardPage dashboardPage;
         protected ProjectPage projectPage;
         protected ProjectListPage projectListPage;
@@ -20,6 +21,7 @@ namespace TestRail.BaseEntities
         {
             this.driver = driver;
             loginPage = new LoginPage(driver);
+            headerPage = new HeaderPage(driver);
             dashboardPage = new DashboardPage(driver);
             projectPage = new ProjectPage(driver);
             projectListPage = new ProjectListPage(driver);

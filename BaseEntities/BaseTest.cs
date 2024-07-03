@@ -12,7 +12,7 @@ namespace TestRail.BaseEntities
     {
         protected IWebDriver driver;
         //Steps
-        protected LoginStep loginStep;
+        protected AuthenticationStep authenticationStep;
         protected ProjectStep projectStep;
         protected NavigationStep navigationStep;
         protected MilestoneStep milestoneStep;
@@ -30,7 +30,7 @@ namespace TestRail.BaseEntities
             driver = new Browser().Driver;
             new LoginPage(driver, true);
             //Steps
-            loginStep = new LoginStep(driver);
+            authenticationStep = new AuthenticationStep(driver);
             projectStep = new ProjectStep(driver);
             navigationStep = new NavigationStep(driver);
             milestoneStep = new MilestoneStep(driver);

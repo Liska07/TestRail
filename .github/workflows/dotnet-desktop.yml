@@ -10,7 +10,7 @@ on:
        options:
        - All
        - Smoke
-       - Login
+       - Authentication
        - Project
        - Milestone
        - Cleaner
@@ -57,9 +57,9 @@ jobs:
       run: dotnet test --filter Category=SmokeTests
 
     # Execute login tests
-    - name: Execute Login Tests
-      if: github.event.inputs.test_category == 'Login'
-      run: dotnet test --filter "Category=LoginTests&Category!=ToFail"
+    - name: Execute Authentication Tests
+      if: github.event.inputs.test_category == 'Authentication'
+      run: dotnet test --filter "Category=AuthenticationTests&Category!=ToFail"
 
     # Execute project tests
     - name: Execute Project Tests
