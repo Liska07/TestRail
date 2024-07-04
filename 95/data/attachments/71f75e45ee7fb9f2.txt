@@ -1,2 +1,0 @@
-2024/06/23 13:42:48.939|INFO|Successful login     
-2024/06/23 13:42:50.820|INFO|Added 'EAntonova b170c5e1-1730-4106-b840-9300d1187d06' project     
