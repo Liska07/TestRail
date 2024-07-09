@@ -1,2 +1,0 @@
-2024/06/29 13:42:52.247|INFO|Successful login     
-2024/06/29 13:42:53.485|INFO|Added 'EAntonova 8aa41727-f43c-4f23-bf27-a9f5a858aa4c' project     
