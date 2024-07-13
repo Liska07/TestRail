@@ -1,0 +1,2 @@
+2024/07/13 13:42:50.073|INFO|Successful login     
+2024/07/13 13:42:51.332|INFO|Added 'EAntonova 01dcc26d-191d-408c-9bdc-046f8af6502d' project     
