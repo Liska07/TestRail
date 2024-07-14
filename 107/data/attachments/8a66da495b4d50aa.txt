@@ -1,5 +1,0 @@
-2024/07/03 01:26:58.437|INFO|Successful login     
-2024/07/03 01:27:00.008|INFO|Added 'EAntonova 349f3555-a50a-467f-93fd-791e946bcf6c' project     
-2024/07/03 01:27:02.557|WARN|Send keys using actions     
-2024/07/03 01:27:03.390|WARN|Send keys using actions     
-2024/07/03 01:27:03.849|INFO|Updated 'EAntonova 349f3555-a50a-467f-93fd-791e946bcf6c Updated' project     
