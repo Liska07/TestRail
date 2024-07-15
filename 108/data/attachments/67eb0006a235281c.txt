@@ -1,5 +1,0 @@
-2024/07/03 01:33:31.300|INFO|Successful login     
-2024/07/03 01:33:32.929|INFO|Added 'EAntonova bacd4a9c-a529-43b6-9f73-0ded5b495b37' project     
-2024/07/03 01:33:35.076|WARN|Send keys using actions     
-2024/07/03 01:33:36.413|WARN|Send keys using actions     
-2024/07/03 01:33:36.915|INFO|Updated 'EAntonova bacd4a9c-a529-43b6-9f73-0ded5b495b37 Updated' project     
