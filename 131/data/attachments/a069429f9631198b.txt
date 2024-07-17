@@ -1,0 +1,5 @@
+2024/07/17 13:42:49.995|INFO|Successful login     
+2024/07/17 13:42:52.353|INFO|Added 'EAntonova 05c94fc7-0b35-45f2-9b3b-0040bc7d3642' project     
+2024/07/17 13:42:54.852|WARN|Send keys using actions     
+2024/07/17 13:42:55.675|WARN|Send keys using actions     
+2024/07/17 13:42:56.438|INFO|Updated 'EAntonova 05c94fc7-0b35-45f2-9b3b-0040bc7d3642 Updated' project (previously 'EAntonova 05c94fc7-0b35-45f2-9b3b-0040bc7d3642')     
