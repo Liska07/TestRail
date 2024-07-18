@@ -1,5 +1,0 @@
-2024/07/03 15:39:43.851|INFO|Successful login     
-2024/07/03 15:39:45.714|INFO|Added 'EAntonova 29660a20-626d-4d57-a268-9a2e3da16092' project     
-2024/07/03 15:39:47.668|WARN|Send keys using actions     
-2024/07/03 15:39:48.692|WARN|Send keys using actions     
-2024/07/03 15:39:49.295|INFO|Updated 'EAntonova 29660a20-626d-4d57-a268-9a2e3da16092 Updated' project     
