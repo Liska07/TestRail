@@ -1,5 +1,0 @@
-2024/07/04 13:43:13.484|INFO|Successful login     
-2024/07/04 13:43:14.933|INFO|Added 'EAntonova 6506b7e6-7426-4ad5-a3b5-ae21ebcd5ff9' project     
-2024/07/04 13:43:17.836|WARN|Send keys using actions     
-2024/07/04 13:43:19.249|WARN|Send keys using actions     
-2024/07/04 13:43:19.881|INFO|Updated 'EAntonova 6506b7e6-7426-4ad5-a3b5-ae21ebcd5ff9 Updated' project (previously 'EAntonova 6506b7e6-7426-4ad5-a3b5-ae21ebcd5ff9')     
