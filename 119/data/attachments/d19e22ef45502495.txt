@@ -1,3 +1,0 @@
-2024/07/07 13:42:46.381|INFO|Successful login     
-2024/07/07 13:42:48.625|INFO|Added 'EAntonova 1a01ff60-00e2-4d61-b28a-162a3838a7fa' project     
-2024/07/07 13:42:49.454|INFO|Deleted 'EAntonova 1a01ff60-00e2-4d61-b28a-162a3838a7fa' project     
