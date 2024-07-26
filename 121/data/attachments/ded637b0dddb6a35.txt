@@ -1,5 +1,0 @@
-2024/07/08 13:42:38.611|INFO|Successful login     
-2024/07/08 13:42:40.643|INFO|Added 'EAntonova 07aa51c8-fa85-489f-8c86-cd5df980cdc2' project     
-2024/07/08 13:42:42.912|WARN|Send keys using actions     
-2024/07/08 13:42:43.862|WARN|Send keys using actions     
-2024/07/08 13:42:44.598|INFO|Updated 'EAntonova 07aa51c8-fa85-489f-8c86-cd5df980cdc2 Updated' project (previously 'EAntonova 07aa51c8-fa85-489f-8c86-cd5df980cdc2')     
