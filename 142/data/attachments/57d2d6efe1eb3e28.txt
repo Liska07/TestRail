@@ -1,0 +1,2 @@
+2024/07/27 13:42:42.975|INFO|Successful login     
+2024/07/27 13:42:43.399|INFO|Logged out     

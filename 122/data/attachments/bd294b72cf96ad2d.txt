@@ -1,3 +1,0 @@
-2024/07/09 13:42:52.442|INFO|Successful login     
-2024/07/09 13:42:53.994|INFO|Added 'EAntonova 30d3e871-2e5b-4fc4-8561-ec783f8fe71f' project     
-2024/07/09 13:42:54.796|INFO|Deleted 'EAntonova 30d3e871-2e5b-4fc4-8561-ec783f8fe71f' project     
