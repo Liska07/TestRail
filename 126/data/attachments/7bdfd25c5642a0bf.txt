@@ -1,3 +1,0 @@
-2024/07/13 13:42:50.946|INFO|Successful login     
-2024/07/13 13:42:52.419|INFO|Added 'EAntonova 9fdd14da-3e41-4751-9a53-757761bd113c' project     
-2024/07/13 13:42:53.302|INFO|Deleted 'EAntonova 9fdd14da-3e41-4751-9a53-757761bd113c' project     
