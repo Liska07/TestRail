@@ -1,1 +1,0 @@
-2024/07/14 13:55:47.857|INFO|Successful login     

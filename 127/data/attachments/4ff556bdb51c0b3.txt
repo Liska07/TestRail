@@ -1,3 +1,0 @@
-2024/07/14 13:55:38.703|INFO|Successful login     
-2024/07/14 13:55:39.991|INFO|Added 'EAntonova 4deb3db6-469c-4d5d-b1fa-e75b853909eb' project     
-2024/07/14 13:55:41.325|INFO|Deleted 'EAntonova 4deb3db6-469c-4d5d-b1fa-e75b853909eb' project     

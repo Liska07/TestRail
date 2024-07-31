@@ -1,5 +1,0 @@
-2024/07/14 13:55:39.085|INFO|Successful login     
-2024/07/14 13:55:40.862|INFO|Added 'EAntonova f7004fc6-8a3f-41be-86f1-c652ba84a214' project     
-2024/07/14 13:55:43.772|WARN|Send keys using actions     
-2024/07/14 13:55:45.012|WARN|Send keys using actions     
-2024/07/14 13:55:45.537|INFO|Updated 'EAntonova f7004fc6-8a3f-41be-86f1-c652ba84a214 Updated' project (previously 'EAntonova f7004fc6-8a3f-41be-86f1-c652ba84a214')     
