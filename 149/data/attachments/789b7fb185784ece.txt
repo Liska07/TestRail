@@ -1,0 +1,5 @@
+2024/08/02 13:42:45.829|INFO|Successful login     
+2024/08/02 13:42:47.305|INFO|Added 'EAntonova 204c499f-85bf-4ea6-be1f-3df30df8566d' project     
+2024/08/02 13:42:48.061|INFO|Deleted 'EAntonova 204c499f-85bf-4ea6-be1f-3df30df8566d' project     
+2024/08/02 13:42:48.299|ERROR|Projects in projectsResponse is null.     
+2024/08/02 13:42:48.340|INFO|Attached a screenshot to Allure     
