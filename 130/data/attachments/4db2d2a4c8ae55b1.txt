@@ -1,5 +1,0 @@
-2024/07/16 13:42:56.851|INFO|Successful login     
-2024/07/16 13:42:58.560|INFO|Added 'EAntonova adc27d3a-0a1f-49a6-ac21-8b19b989f603' project     
-2024/07/16 13:43:01.702|WARN|Send keys using actions     
-2024/07/16 13:43:03.060|WARN|Send keys using actions     
-2024/07/16 13:43:03.618|INFO|Updated 'EAntonova adc27d3a-0a1f-49a6-ac21-8b19b989f603 Updated' project (previously 'EAntonova adc27d3a-0a1f-49a6-ac21-8b19b989f603')     
