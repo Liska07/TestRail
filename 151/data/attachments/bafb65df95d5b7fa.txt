@@ -1,0 +1,3 @@
+2024/08/05 12:30:21.910|INFO|Successful login     
+2024/08/05 12:30:23.112|INFO|Added 'EAntonova f42aaf97-bc51-4e4f-aede-ae1abc30d520' project     
+2024/08/05 12:30:23.939|INFO|Deleted 'EAntonova f42aaf97-bc51-4e4f-aede-ae1abc30d520' project     

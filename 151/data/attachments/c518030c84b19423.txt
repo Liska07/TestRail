@@ -1,0 +1,5 @@
+2024/08/05 12:30:22.819|INFO|Successful login     
+2024/08/05 12:30:24.150|INFO|Added 'EAntonova 57f84a7e-32a3-439d-bc53-2fb5829253fc' project     
+2024/08/05 12:30:27.431|WARN|Send keys using actions     
+2024/08/05 12:30:28.737|WARN|Send keys using actions     
+2024/08/05 12:30:29.296|INFO|Updated 'EAntonova 57f84a7e-32a3-439d-bc53-2fb5829253fc Updated' project (previously 'EAntonova 57f84a7e-32a3-439d-bc53-2fb5829253fc')     

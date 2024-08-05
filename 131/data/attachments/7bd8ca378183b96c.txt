@@ -1,2 +1,0 @@
-2024/07/17 13:42:40.731|INFO|Added a project: {"id":397,"name":"EAntonova ef9b090d-c1f2-4ca4-b955-8dd72c948909","announcement":null,"show_announcement":false,"is_completed":false,"completed_on":null,"suite_mode":3,"default_role_id":null,"case_statuses_enabled":false,"url":"https:\/\/liska02.testrail.io\/index.php?\/projects\/overview\/397","users":[],"groups":[]}. StatusCode.OK     
-2024/07/17 13:42:40.967|INFO|Deleted a project with id = 397. StatusCode.OK     
