@@ -1,3 +1,0 @@
-2024/07/18 13:42:54.438|INFO|Successful login     
-2024/07/18 13:42:55.887|INFO|Added 'EAntonova f7177600-5c9c-4211-b6c0-fa26f9cbed9a' project     
-2024/07/18 13:42:56.795|INFO|Deleted 'EAntonova f7177600-5c9c-4211-b6c0-fa26f9cbed9a' project     
