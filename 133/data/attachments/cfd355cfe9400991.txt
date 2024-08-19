@@ -1,5 +1,0 @@
-2024/07/19 13:42:46.139|INFO|Successful login     
-2024/07/19 13:42:47.726|INFO|Added 'EAntonova 5d024398-1407-4aba-8bbb-5f380417b26b' project     
-2024/07/19 13:42:50.325|WARN|Send keys using actions     
-2024/07/19 13:42:51.728|WARN|Send keys using actions     
-2024/07/19 13:42:52.305|INFO|Updated 'EAntonova 5d024398-1407-4aba-8bbb-5f380417b26b Updated' project (previously 'EAntonova 5d024398-1407-4aba-8bbb-5f380417b26b')     

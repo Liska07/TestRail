@@ -1,0 +1,3 @@
+2024/08/19 12:29:58.075|INFO|Successful login     
+2024/08/19 12:29:59.105|INFO|Added 'EAntonova 50d00f97-256b-448e-8131-682dfe53e297' project     
+2024/08/19 12:30:00.400|INFO|Deleted 'EAntonova 50d00f97-256b-448e-8131-682dfe53e297' project     

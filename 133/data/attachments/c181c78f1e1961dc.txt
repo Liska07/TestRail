@@ -1,3 +1,0 @@
-2024/07/19 13:42:46.066|INFO|Successful login     
-2024/07/19 13:42:47.492|INFO|Added 'EAntonova 2d95ec5d-3224-4b73-b4bc-d46e6dc3d8c7' project     
-2024/07/19 13:42:48.441|INFO|Deleted 'EAntonova 2d95ec5d-3224-4b73-b4bc-d46e6dc3d8c7' project     
