@@ -1,0 +1,2 @@
+2024/08/26 12:31:04.773|INFO|Added a project: {"id":84,"name":"EAntonova cb8d177f-305e-486e-af1e-0ae2dcc35873","announcement":null,"show_announcement":false,"is_completed":false,"completed_on":null,"suite_mode":3,"default_role_id":null,"case_statuses_enabled":false,"url":"https:\/\/liska03.testrail.io\/index.php?\/projects\/overview\/84","users":[],"groups":[]}. StatusCode.OK     
+2024/08/26 12:31:05.157|INFO|Deleted a project with id = 84. StatusCode.OK     

@@ -1,0 +1,5 @@
+2024/08/26 12:30:59.605|INFO|Successful login     
+2024/08/26 12:31:01.098|INFO|Added 'EAntonova 96535c8d-cbb6-408f-b3c7-9f34a9d880f5' project     
+2024/08/26 12:31:03.193|WARN|Send keys using actions     
+2024/08/26 12:31:04.030|WARN|Send keys using actions     
+2024/08/26 12:31:04.562|INFO|Updated 'EAntonova 96535c8d-cbb6-408f-b3c7-9f34a9d880f5 Updated' project (previously 'EAntonova 96535c8d-cbb6-408f-b3c7-9f34a9d880f5')     
