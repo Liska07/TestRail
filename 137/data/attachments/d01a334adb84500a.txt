@@ -1,5 +1,0 @@
-2024/07/22 13:42:27.490|INFO|Successful login     
-2024/07/22 13:42:28.755|INFO|Added 'EAntonova e1f01181-efbf-4fc8-88af-73160bfa8e68' project     
-2024/07/22 13:42:30.927|WARN|Send keys using actions     
-2024/07/22 13:42:31.858|WARN|Send keys using actions     
-2024/07/22 13:42:32.389|INFO|Updated 'EAntonova e1f01181-efbf-4fc8-88af-73160bfa8e68 Updated' project (previously 'EAntonova e1f01181-efbf-4fc8-88af-73160bfa8e68')     
