@@ -1,3 +1,0 @@
-2024/07/23 13:42:47.865|INFO|Successful login     
-2024/07/23 13:42:49.386|INFO|Added 'EAntonova 89b2e2ff-dfa2-40ae-a734-a5551d31424c' project     
-2024/07/23 13:42:50.267|INFO|Deleted 'EAntonova 89b2e2ff-dfa2-40ae-a734-a5551d31424c' project     

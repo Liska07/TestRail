@@ -1,5 +1,0 @@
-2024/07/23 13:42:47.872|INFO|Successful login     
-2024/07/23 13:42:49.732|INFO|Added 'EAntonova 29fef3ee-aa89-4c23-a499-eb1f742ad5d8' project     
-2024/07/23 13:42:51.948|WARN|Send keys using actions     
-2024/07/23 13:42:52.929|WARN|Send keys using actions     
-2024/07/23 13:42:53.626|INFO|Updated 'EAntonova 29fef3ee-aa89-4c23-a499-eb1f742ad5d8 Updated' project (previously 'EAntonova 29fef3ee-aa89-4c23-a499-eb1f742ad5d8')     
