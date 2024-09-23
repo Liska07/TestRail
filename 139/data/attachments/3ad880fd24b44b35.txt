@@ -1,5 +1,0 @@
-2024/07/24 13:43:12.962|INFO|Successful login     
-2024/07/24 13:43:14.224|INFO|Added 'EAntonova 27aa2e64-03e8-45b0-8bbb-9accd395e97c' project     
-2024/07/24 13:43:17.344|WARN|Send keys using actions     
-2024/07/24 13:43:18.353|WARN|Send keys using actions     
-2024/07/24 13:43:18.910|INFO|Updated 'EAntonova 27aa2e64-03e8-45b0-8bbb-9accd395e97c Updated' project (previously 'EAntonova 27aa2e64-03e8-45b0-8bbb-9accd395e97c')     
