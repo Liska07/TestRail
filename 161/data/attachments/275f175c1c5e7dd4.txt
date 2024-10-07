@@ -1,0 +1,7 @@
+2024/10/07 12:34:26.356|INFO|Successful login     
+2024/10/07 12:34:28.127|INFO|Added 'EAntonova f543120c-9baf-43a3-af12-bddaa2e00cd2' project     
+2024/10/07 12:34:31.403|WARN|Send keys using actions     
+2024/10/07 12:34:32.489|WARN|Send keys using actions     
+2024/10/07 12:34:33.017|INFO|Updated 'EAntonova f543120c-9baf-43a3-af12-bddaa2e00cd2 Updated' project (previously 'EAntonova f543120c-9baf-43a3-af12-bddaa2e00cd2')     
+2024/10/07 12:34:33.195|ERROR|Projects in projectsResponse is null.     
+2024/10/07 12:34:33.312|INFO|Attached a screenshot to Allure     
