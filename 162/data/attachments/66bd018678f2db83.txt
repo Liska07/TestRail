@@ -1,0 +1,5 @@
+2024/10/14 12:33:58.394|INFO|Successful login     
+2024/10/14 12:33:59.894|INFO|Added 'EAntonova 18c4792a-94c3-402d-8cee-2ff390555b4d' project     
+2024/10/14 12:34:00.830|INFO|Deleted 'EAntonova 18c4792a-94c3-402d-8cee-2ff390555b4d' project     
+2024/10/14 12:34:01.647|ERROR|Projects in projectsResponse is null.     
+2024/10/14 12:34:01.814|INFO|Attached a screenshot to Allure     

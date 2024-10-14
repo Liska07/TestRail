@@ -1,0 +1,2 @@
+2024/10/14 12:33:56.000|INFO|Successful login     
+2024/10/14 12:34:01.461|INFO|Attached a screenshot to Allure     

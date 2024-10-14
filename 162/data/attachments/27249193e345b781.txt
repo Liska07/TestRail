@@ -1,0 +1,7 @@
+2024/10/14 12:33:58.542|INFO|Successful login     
+2024/10/14 12:34:00.373|INFO|Added 'EAntonova 4cfaa8f2-7dd0-4c7a-807e-d81454a69d69' project     
+2024/10/14 12:34:04.371|WARN|Send keys using actions     
+2024/10/14 12:34:06.371|WARN|Send keys using actions     
+2024/10/14 12:34:07.205|INFO|Updated 'EAntonova 4cfaa8f2-7dd0-4c7a-807e-d81454a69d69 Updated' project (previously 'EAntonova 4cfaa8f2-7dd0-4c7a-807e-d81454a69d69')     
+2024/10/14 12:34:07.542|ERROR|Projects in projectsResponse is null.     
+2024/10/14 12:34:07.791|INFO|Attached a screenshot to Allure     

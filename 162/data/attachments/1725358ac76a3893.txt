@@ -1,0 +1,4 @@
+2024/10/14 12:33:51.292|INFO|Successful login     
+2024/10/14 12:33:51.640|INFO|Added a project: {"error":"Your TestRail Cloud account is disabled. Please contact your TestRail administrator to learn more."}. StatusCode.ServiceUnavailable     
+2024/10/14 12:33:51.642|ERROR|The name of the project can't be empty.     
+2024/10/14 12:33:52.161|INFO|Attached a screenshot to Allure     
