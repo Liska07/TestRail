@@ -1,5 +1,0 @@
-2024/07/28 13:42:53.785|INFO|Successful login     
-2024/07/28 13:42:55.874|INFO|Added 'EAntonova a7aa5a98-b690-4112-a2a2-a24ed587a1de' project     
-2024/07/28 13:42:58.917|WARN|Send keys using actions     
-2024/07/28 13:43:00.003|WARN|Send keys using actions     
-2024/07/28 13:43:00.666|INFO|Updated 'EAntonova a7aa5a98-b690-4112-a2a2-a24ed587a1de Updated' project (previously 'EAntonova a7aa5a98-b690-4112-a2a2-a24ed587a1de')     
