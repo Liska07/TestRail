@@ -1,0 +1,4 @@
+2024/10/28 12:35:03.203|INFO|Successful login     
+2024/10/28 12:35:04.924|INFO|Added 'EAntonova 0de5d6df-cef5-4905-a23f-afbe14674919' project     
+2024/10/28 12:35:05.962|ERROR|Projects in projectsResponse is null.     
+2024/10/28 12:35:06.078|INFO|Attached a screenshot to Allure     
