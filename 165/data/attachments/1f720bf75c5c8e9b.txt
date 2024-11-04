@@ -1,0 +1,25 @@
+2024/11/04 12:34:23.312|ERROR|'Login Button' on the 'Login Page' is  not displayed! OpenQA.Selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#button_primary"}
+  (Session info: chrome=130.0.6723.58); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at TestRail.Elements.UiElement..ctor(IWebDriver driver, By locator) in /home/runner/work/TestRail/TestRail/Elements/UiElement.cs:line 54
+   at TestRail.Elements.Button..ctor(IWebDriver driver, By locator) in /home/runner/work/TestRail/TestRail/Elements/Button.cs:line 12
+   at TestRail.Pages.LoginPage.LoginButton() in /home/runner/work/TestRail/TestRail/Pages/LoginPage.cs:line 25
+   at TestRail.Pages.LoginPage.EvaluateLoadedStatus() in /home/runner/work/TestRail/TestRail/Pages/LoginPage.cs:line 38     
+2024/11/04 12:34:28.389|ERROR|'Login Button' on the 'Login Page' is  not displayed! OpenQA.Selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#button_primary"}
+  (Session info: chrome=130.0.6723.58); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at TestRail.Elements.UiElement..ctor(IWebDriver driver, By locator) in /home/runner/work/TestRail/TestRail/Elements/UiElement.cs:line 54
+   at TestRail.Elements.Button..ctor(IWebDriver driver, By locator) in /home/runner/work/TestRail/TestRail/Elements/Button.cs:line 12
+   at TestRail.Pages.LoginPage.LoginButton() in /home/runner/work/TestRail/TestRail/Pages/LoginPage.cs:line 25
+   at TestRail.Pages.LoginPage.EvaluateLoadedStatus() in /home/runner/work/TestRail/TestRail/Pages/LoginPage.cs:line 38     
+2024/11/04 12:34:28.540|INFO|Attached a screenshot to Allure     
