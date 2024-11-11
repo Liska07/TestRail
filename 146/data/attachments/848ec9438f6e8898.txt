@@ -1,3 +1,0 @@
-2024/07/30 13:43:02.041|INFO|Successful login     
-2024/07/30 13:43:03.223|INFO|Added 'EAntonova 9c41a856-2475-4c59-9ae6-b1dcb51ab682' project     
-2024/07/30 13:43:04.168|INFO|Deleted 'EAntonova 9c41a856-2475-4c59-9ae6-b1dcb51ab682' project     

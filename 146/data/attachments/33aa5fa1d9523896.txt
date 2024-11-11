@@ -1,5 +1,0 @@
-2024/07/30 13:43:02.085|INFO|Successful login     
-2024/07/30 13:43:03.557|INFO|Added 'EAntonova dd779a6e-8024-49c7-9ace-8d8660f8b05c' project     
-2024/07/30 13:43:06.302|WARN|Send keys using actions     
-2024/07/30 13:43:07.492|WARN|Send keys using actions     
-2024/07/30 13:43:08.071|INFO|Updated 'EAntonova dd779a6e-8024-49c7-9ace-8d8660f8b05c Updated' project (previously 'EAntonova dd779a6e-8024-49c7-9ace-8d8660f8b05c')     
