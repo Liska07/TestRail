@@ -1,0 +1,2 @@
+2024/11/17 16:05:00.287|INFO|Added a project: {"id":36,"name":"EAntonova e933e315-6912-4042-9331-b7b476f34189","announcement":null,"show_announcement":false,"is_completed":false,"completed_on":null,"suite_mode":3,"default_role_id":null,"case_statuses_enabled":false,"url":"https:\/\/liska04.testrail.io\/index.php?\/projects\/overview\/36","users":[],"groups":[]}. StatusCode.OK     
+2024/11/17 16:05:00.548|INFO|Deleted a project with id = 36. StatusCode.OK     
