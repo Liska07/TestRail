@@ -1,7 +1,0 @@
-2024/08/02 13:42:47.514|INFO|Successful login     
-2024/08/02 13:42:51.995|INFO|Added 'EAntonova 4e5f0f75-cd25-443b-8ef9-5c74422160e3' project     
-2024/08/02 13:42:53.968|WARN|Send keys using actions     
-2024/08/02 13:42:54.828|WARN|Send keys using actions     
-2024/08/02 13:42:55.314|INFO|Updated 'EAntonova 4e5f0f75-cd25-443b-8ef9-5c74422160e3 Updated' project (previously 'EAntonova 4e5f0f75-cd25-443b-8ef9-5c74422160e3')     
-2024/08/02 13:42:55.621|ERROR|Projects in projectsResponse is null.     
-2024/08/02 13:42:55.669|INFO|Attached a screenshot to Allure     
