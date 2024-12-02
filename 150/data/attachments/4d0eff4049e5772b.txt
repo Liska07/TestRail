@@ -1,5 +1,0 @@
-2024/08/02 15:09:36.863|INFO|Successful login     
-2024/08/02 15:09:38.238|INFO|Added 'EAntonova 550cd090-0324-4454-9349-59e346e6a445' project     
-2024/08/02 15:09:40.772|WARN|Send keys using actions     
-2024/08/02 15:09:41.774|WARN|Send keys using actions     
-2024/08/02 15:09:42.284|INFO|Updated 'EAntonova 550cd090-0324-4454-9349-59e346e6a445 Updated' project (previously 'EAntonova 550cd090-0324-4454-9349-59e346e6a445')     
