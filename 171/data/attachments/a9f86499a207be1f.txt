@@ -1,0 +1,3 @@
+2024/12/09 12:37:37.305|INFO|Successful login     
+2024/12/09 12:37:39.197|INFO|Added 'EAntonova eed9aba1-4e38-4e20-b934-b85d160535aa' project     
+2024/12/09 12:37:40.388|INFO|Deleted 'EAntonova eed9aba1-4e38-4e20-b934-b85d160535aa' project     

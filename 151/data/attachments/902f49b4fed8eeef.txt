@@ -1,1 +1,0 @@
-2024/08/05 12:30:20.594|INFO|Successful login     
