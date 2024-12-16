@@ -1,0 +1,4 @@
+2024/12/16 12:37:23.890|INFO|Successful login     
+2024/12/16 12:37:25.467|INFO|Added 'EAntonova 96b7c25c-6b91-4b22-93f1-0afbb81b7948' project     
+2024/12/16 12:37:27.651|WARN|Сlicked using actions     
+2024/12/16 12:37:32.981|INFO|Attached a screenshot to Allure     
