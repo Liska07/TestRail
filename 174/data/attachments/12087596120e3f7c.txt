@@ -1,0 +1,5 @@
+2024/12/30 12:33:27.226|INFO|Successful login     
+2024/12/30 12:33:29.232|INFO|Added 'EAntonova a5a379c4-5e73-4fd5-9e4e-46dd077d6986' project     
+2024/12/30 12:33:30.414|INFO|Deleted 'EAntonova a5a379c4-5e73-4fd5-9e4e-46dd077d6986' project     
+2024/12/30 12:33:31.124|ERROR|Projects in projectsResponse is null.     
+2024/12/30 12:33:31.346|INFO|Attached a screenshot to Allure     
