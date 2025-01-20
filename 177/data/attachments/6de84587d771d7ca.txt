@@ -1,0 +1,5 @@
+2025/01/20 12:33:14.352|INFO|Successful login     
+2025/01/20 12:33:16.036|INFO|Added 'EAntonova 8df97d5e-6078-449f-ba22-0fb84068765b' project     
+2025/01/20 12:33:17.488|INFO|Deleted 'EAntonova 8df97d5e-6078-449f-ba22-0fb84068765b' project     
+2025/01/20 12:33:18.065|ERROR|Projects in projectsResponse is null.     
+2025/01/20 12:33:18.204|INFO|Attached a screenshot to Allure     
