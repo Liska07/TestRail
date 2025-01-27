@@ -1,0 +1,3 @@
+2025/01/27 12:33:19.997|INFO|Successful login     
+2025/01/27 12:33:21.405|WARN|Сlicked using actions     
+2025/01/27 12:33:26.618|INFO|Attached a screenshot to Allure     
