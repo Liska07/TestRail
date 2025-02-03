@@ -1,3 +1,0 @@
-2024/09/23 12:33:12.638|INFO|Successful login     
-2024/09/23 12:33:14.039|WARN|Сlicked using actions     
-2024/09/23 12:33:19.232|INFO|Attached a screenshot to Allure     

@@ -1,0 +1,5 @@
+2025/02/03 12:36:06.673|INFO|Successful login     
+2025/02/03 12:36:25.223|INFO|Added 'EAntonova 367faacf-1afd-4363-95b3-c9cba7710fd2' project     
+2025/02/03 12:36:26.608|INFO|Deleted 'EAntonova 367faacf-1afd-4363-95b3-c9cba7710fd2' project     
+2025/02/03 12:36:27.054|ERROR|Projects in projectsResponse is null.     
+2025/02/03 12:36:27.144|INFO|Attached a screenshot to Allure     
