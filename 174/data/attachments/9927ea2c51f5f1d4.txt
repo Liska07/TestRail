@@ -1,7 +1,0 @@
-2024/12/30 12:33:27.824|INFO|Successful login     
-2024/12/30 12:33:30.178|INFO|Added 'EAntonova 13315488-7775-43b7-81bf-d03932d02f7e' project     
-2024/12/30 12:33:32.877|WARN|Send keys using actions     
-2024/12/30 12:33:34.356|WARN|Send keys using actions     
-2024/12/30 12:33:35.320|INFO|Updated 'EAntonova 13315488-7775-43b7-81bf-d03932d02f7e Updated' project (previously 'EAntonova 13315488-7775-43b7-81bf-d03932d02f7e')     
-2024/12/30 12:33:35.754|ERROR|Projects in projectsResponse is null.     
-2024/12/30 12:33:35.912|INFO|Attached a screenshot to Allure     
