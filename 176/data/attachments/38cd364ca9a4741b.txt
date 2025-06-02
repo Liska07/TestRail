@@ -1,7 +1,0 @@
-2025/01/13 12:35:10.234|INFO|Successful login     
-2025/01/13 12:35:13.149|INFO|Added 'EAntonova 35ce5fb2-b1cb-4a01-a892-020fe8006b24' project     
-2025/01/13 12:35:16.590|WARN|Send keys using actions     
-2025/01/13 12:35:17.570|WARN|Send keys using actions     
-2025/01/13 12:35:18.379|INFO|Updated 'EAntonova 35ce5fb2-b1cb-4a01-a892-020fe8006b24 Updated' project (previously 'EAntonova 35ce5fb2-b1cb-4a01-a892-020fe8006b24')     
-2025/01/13 12:35:18.515|ERROR|Projects in projectsResponse is null.     
-2025/01/13 12:35:18.647|INFO|Attached a screenshot to Allure     

@@ -1,5 +1,0 @@
-2025/01/13 12:35:09.834|INFO|Successful login     
-2025/01/13 12:35:12.157|INFO|Added 'EAntonova 36af8ff3-7e56-4893-976e-353b98a14e35' project     
-2025/01/13 12:35:13.814|INFO|Deleted 'EAntonova 36af8ff3-7e56-4893-976e-353b98a14e35' project     
-2025/01/13 12:35:14.075|ERROR|Projects in projectsResponse is null.     
-2025/01/13 12:35:14.301|INFO|Attached a screenshot to Allure     
