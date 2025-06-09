@@ -1,5 +1,0 @@
-2025/01/20 12:33:08.051|INFO|Successful login     
-2025/01/20 12:33:10.114|WARN|Send keys using actions     
-2025/01/20 12:33:10.889|INFO|Added 'EAntonova 7515e5fd-c91e-4cb5-9c19-1aaef72b428e' project     
-2025/01/20 12:33:11.621|ERROR|Projects in projectsResponse is null.     
-2025/01/20 12:33:11.854|INFO|Attached a screenshot to Allure     

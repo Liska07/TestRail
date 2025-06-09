@@ -1,7 +1,0 @@
-2025/01/20 12:33:14.667|INFO|Successful login     
-2025/01/20 12:33:17.624|INFO|Added 'EAntonova 0d2db553-dc68-4a5c-8a80-66b0342f47e2' project     
-2025/01/20 12:33:21.587|WARN|Send keys using actions     
-2025/01/20 12:33:22.839|WARN|Send keys using actions     
-2025/01/20 12:33:23.851|INFO|Updated 'EAntonova 0d2db553-dc68-4a5c-8a80-66b0342f47e2 Updated' project (previously 'EAntonova 0d2db553-dc68-4a5c-8a80-66b0342f47e2')     
-2025/01/20 12:33:24.044|ERROR|Projects in projectsResponse is null.     
-2025/01/20 12:33:24.245|INFO|Attached a screenshot to Allure     

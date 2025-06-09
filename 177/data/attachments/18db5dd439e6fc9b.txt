@@ -1,2 +1,0 @@
-2025/01/20 12:33:24.182|INFO|Added a project: {"error":"Your TestRail Cloud account is disabled. Please contact your TestRail administrator to learn more."}. StatusCode.ServiceUnavailable     
-2025/01/20 12:33:24.182|ERROR|The name of the project can't be empty.     
