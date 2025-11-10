@@ -1,1 +1,0 @@
-2025/08/18 12:42:53.200|INFO|Added a project: . StatusCode.NotFound     
